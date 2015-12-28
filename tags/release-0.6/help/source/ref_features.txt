@@ -1,0 +1,4 @@
+page:ref_features.html "Feature Reference"
+
+= Feature reference =
+child_summary

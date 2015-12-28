@@ -1,0 +1,18 @@
+page:feat_raster_selection.html "Raster Selection"
+summary:"Raster selection methods"
+
+= Raster selection =
+A region in the image can be selected. The selected region is the target for some operations. The selected content can be moved and rotated.
+
+== Deselect ==
+* *Menu* (in Raster mode): Edit->select None (Ctrl+D)
+
+== Select all ==
+* *Menu* (in Raster mode): Edit->Select All (Ctrl+A)
+
+== Select specific region ==
+* *Tool*: Use the -tool_raster_selection,raster selection tool-
+* *Python* set_selection('rect')
+
+---
+See also -feat_object_selection.txt- for the object equivalent and -feat_shrink_selection.txt- for a way to clamp the selection to content.

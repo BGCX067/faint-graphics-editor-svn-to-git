@@ -1,0 +1,22 @@
+page:"Raster selection"
+summary:"Tool for selecting regions in the image"
+
+= \graphic(tool-rectsel.png) Raster selection =
+label:tool_raster_selection
+The Selection tool selects and moves/manipulates areas in the
+image. Many commands behave differently when a selection is
+active. For example, the "Crop" command will crop the image to the
+selection if there is one, otherwise the command will perform
+an \ref(auto_crop,auto crop).
+
+*Settings*
+||\graphic(choice-transparent.png)|| Transparent background: The selected background color will not be transferred when the selection is moved. ||
+||\graphic(choice-opaque.png)|| Opaque background: The selected area will be transferred with all colors. The "hole" left behind a moved selection will receive the current background color.||
+||\graphic(alpha-blending.png)|| Alpha blending: When enabled, colors in the selection will blend with the background. When disabled, the colors from the selection will be copied as is to the background, including the alpha value. ||
+
+*Keyboard modifiers*
+||\image(key_ctrl.png)|| If Ctrl is held when a selection is dragged, the selection will be copied. ||
+||\image(key_shift.png)|| If shift is held when a selection is dragged, the drag will be constrained to horizontal or vertical lines. ||
+
+||\image(icon_info.png)|| Use Ctrl+Right-Click inside the selection to quickly pick a color to treat as transparent. Ctrl+Right-Click outside to select Opaque background. ||
+|| || See \ref(feat-dwim-delete.txt) for a quick way to clear an area with the surrounding color ||

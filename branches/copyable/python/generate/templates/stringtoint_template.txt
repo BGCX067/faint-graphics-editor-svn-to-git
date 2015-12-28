@@ -1,0 +1,13 @@
+PyObject* set_$name( PyObject*, PyObject* args ){
+  // From stringtoint_template.txt
+
+  char* s_value;
+  if ( !PyArg_ParseTuple( args, "s", &s_value ) ){
+    return nullptr;
+  }
+  $string_to_int
+
+  auto& app = faint::get_app_context();
+  app.Set( $setting, to_int(value) );
+  return Py_BuildValue("");
+}

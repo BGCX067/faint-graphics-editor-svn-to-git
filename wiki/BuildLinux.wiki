@@ -1,0 +1,89 @@
+= MOVING =
+Faint development has moved to github:
+https://github.com/lukas-ke/faint-graphics-editor
+
+*Note* These build instructions are outdated. See instead https://github.com/lukas-ke/faint-graphics-editor/blob/master/build/build-instructions-linux.md
+
+= Building Faint on Linux =
+For simplicity, this guide assumes that the path "~/dev" is used for
+wxWidgets and for Faint.
+
+= 1. wxWidgets =
+wxWidgets is the GUI toolkit used for Faint.
+
+== Check out the wxWidgets trunk ==
+{{{
+cd ~/dev
+svn checkout http://svn.wxwidgets.org/svn/wx/wxWidgets/trunk wxWidgets
+}}}
+
+== Build wxWidgets ==
+{{{
+cd ~/dev/wxWidgets
+./configure --disable-shared --enable-monolithic --enable-aui
+make
+}}}
+
+= 2. Python = 
+Python is used for generating some code when building Faint, as a
+build script and as the embedded scripting language of Faint.
+
+== Install the Python dev-files ==
+Python3.4 + development headers are required.
+{{{
+sudo apt-get install python3.4
+sudo apt-get install python3.4-dev
+
+}}}
+
+= 3. Various dependencies =
+You may also need to get these packages:
+ * build-essentials  
+ * gtk+-2.0
+
+*Note:* Either gcc-4.9 or clang-3.6 (or later) are required (C++14-support).
+
+= 4. Faint =
+Finally!
+
+== Check out Faint ==
+{{{
+cd ~/dev
+svn co http://faint-graphics-editor.googlecode.com/svn/trunk/ faint-graphics-editor
+}}}
+
+== Create build.cfg ==
+The file build.cfg contains paths to Faint-depdendencies. Generate the config file as follows:
+{{{
+cd ~/dev/faint-graphics-editor/build
+python3 build.py
+}}}
+
+This creates build.cfg. Edit it so that it points out dependencies
+correctly, example:
+{{{
+[folders]
+wx_root=~/dev/wxWidgets
+cairo_include=/usr/include/cairo
+cairo_lib=
+python_include=/usr/include/python3.4
+python_lib=/usr/lib/python3.4/config-3.4m-i386-linux-gnu
+pango_include=/usr/include/pango-1.0
+pango_lib=
+glib_include=/usr/include/glib-2.0
+glib_lib=
+glib_config_include=/usr/lib/i386-linux-gnu/glib-2.0/include
+}}}
+
+== Build Faint ==
+Run build.py again to build faint:
+{{{
+cd ~/dev/faint-graphics-editor/build
+python3 build.py
+}}}
+
+== Start Faint ==
+{{{
+cd ~/dev/faint-graphics-editor
+./faint 
+}}}

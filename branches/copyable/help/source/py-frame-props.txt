@@ -1,0 +1,20 @@
+page:"FrameProps"
+summary:"Interface to new image frames during loading in custom file format load functions"
+
+= FrameProps =
+\image(py_modifies_state.png)
+
+FrameProps instances are used in load-functions that have been
+added with add_format when loading a file type matching that format.
+
+FrameProps objects are created with the
+add_frame-method of \ref(py-image-props.txt,ImageProps) objects, and are used to load frames (or images). The pixel
+and object data for a frame can be modified using the FrameProps.
+
+== FrameProps methods ==
+\methoddef(py-frame-props.cpp,frame_props_methods)
+
+---
+See also:
+* \ref(py-image-props.txt)
+* \ref(python-custom-format.txt) - intro to adding file formats.

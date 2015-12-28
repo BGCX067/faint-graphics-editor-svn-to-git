@@ -1,0 +1,21 @@
+page:"Text"
+summary:"Add text"
+
+= \graphic(tool-text.png) Text =
+label:tool_text
+The text tool adds a text box for either static text or editable text
+objects. To create a text box, click in the image and drag to create a
+box, then enter text with the keyboard. To stop entering text, use the
+right mouse button or Ctrl+Enter.
+
+When complete, the text will either be drawn to the image in raster
+mode, or added as a text object in object mode.
+
+To edit text objects, use the selection tool and double click the text
+object, or use the text tool and click a selected text object once.
+
+*Settings*
+||\image(fontface.png)||Font settings||Various font settings||
+||\image(fontsize.png)||Font size||Font size in points||
+||\graphic(text-bounded.png)||Bounded by rectangle||Whether the text should be bounded to a rectangle or free-flowing||
+||\graphic(text-align-left.png)\graphic(text-align-center.png)\graphic(text-align-right.png)||Alignment||Whether the text should be left aligned, centered or right aligned||

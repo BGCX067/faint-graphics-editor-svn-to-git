@@ -1,0 +1,13 @@
+page:"Grid"
+summary:"The grid supports snapping to positions in an image"
+
+= Grid =
+The grid supports constraining drawing and object positions to grid
+intersections. To enable the grid, use the \ref(gui_grid_control.txt).
+
+image:feat_grid.png
+
+Many tools snap to the grid when Ctrl is held.
+
+---
+See \ref(gui_grid_control.txt).

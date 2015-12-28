@@ -1,0 +1,38 @@
+page:"Snap to 90-degree points"
+summary:"Snapping a mid point to the 90-degree corners of two points"
+
+\image(feat_icon_object.png) \image(feat_icon_tool.png)
+
+= Snap to 90-degree points =
+Points in polylines and polygons can be snapped to form a 90-degree corner together with the neighbouring points.
+
+||\image(feat_90_snap_pre.png)||\image(feat_90_snap_post.png)||
+||A diagonal line.||That line, with mid-point snapped to\br a 90-degree point||
+
+\image(feat_90_snap_points.png)
+
+== Method ==
+||\image(key_ctrl.png)||Hold Ctrl while moving a point in a selected object. Move the point within snap-range of a corner formed by the moved point and its neighbours.||
+
+== Example ==
+||\image(feat_90_snap_1.png)||
+||Behold: two rectangle objects.||
+
+||\image(feat_90_snap_2.png)||
+||A line with arrow head is added, connecting the snap points on the sides of the rectangles.||
+
+||\image(feat_90_snap_3.png)||
+||\image(object_selection_cutout.png)\image(edit_points_enabled_cutout.png)||
+||The line is selected with the object selection tool. Point editing is enabled.||
+
+||\image(feat_90_snap_4.png)||
+||The center point is moved.||
+
+||\image(feat_90_snap_5.png)||
+||\image(key_ctrl.png)||
+||Using Ctrl, the mid-point is snapped to the 90-degree point between the start and end point.||
+
+---
+See also:\br
+* \ref(feat-grid.txt) for snapping to a grid
+* \ref(feat-snap-points.txt) for snapping to certain points in objects

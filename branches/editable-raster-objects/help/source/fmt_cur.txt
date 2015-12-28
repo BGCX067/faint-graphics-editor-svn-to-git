@@ -1,0 +1,15 @@
+page:"CUR"
+summary:"A format for application cursors on Microsoft Windows"
+
+image:fmt_flatten.png image:fmt_multi_image.png image:fmt_lossless.png image:fmt_limited_size.png
+
+= Windows Cursor (.cur) =
+A format for application cursors on Microsoft Windows. A cursor
+consists of one or more images of different size and color depths to
+provide variants for different situations. The width and height of
+cursors is limited to 256 pixels.
+
+Cursors have a Hot-spot for specifying which point is the focus. In
+Faint, the Hot-spot can currently only be modified from the Python
+interpreter, using image.get_frame_hotspot and
+image.set_frame_hotspot.

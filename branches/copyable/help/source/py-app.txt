@@ -1,0 +1,14 @@
+page:"FaintApp"
+summary:"Interface for Faint application settings"
+
+= FaintApp =
+\image(py_modifies_state.png)
+
+Interface for Faint application settings.  Accessed via the predefined
+"app"-object
+
+== App properties ==
+\getsetdef(..\python\py-app.cpp)
+
+== App methods ==
+\methoddef(py-app.cpp,faintapp_methods)

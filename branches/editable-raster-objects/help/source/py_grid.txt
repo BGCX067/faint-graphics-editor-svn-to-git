@@ -1,0 +1,7 @@
+page:"Grid"
+summary:"Interface for the Grid for an image"
+
+= Grid =
+image:py_modifies_state.png
+
+Grid objects are used to modify \ref(feat_grid.txt,grid) settings for an image.

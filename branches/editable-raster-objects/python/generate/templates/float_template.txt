@@ -1,0 +1,20 @@
+PyObject* set_$name( PyObject*, PyObject* args ){
+  faint::coord value;
+  if ( !PyArg_ParseTuple( args, "d", &value ) ){
+    return nullptr;
+  }
+  if ( value < $min_value  || $max_value < value ){
+    PyErr_SetString( PyExc_ValueError, "Argument for set_$name outside range [$min_value, $max_value]." );
+    return nullptr;
+  }
+
+  AppContext& app = GetAppContext();
+  app.Set( $setting, value );
+  return Py_BuildValue("");
+}
+
+PyObject* get_$name( PyObject*, PyObject* ){
+  AppContext& app = GetAppContext();
+  faint::coord value = app.Get( $setting );
+  return Py_BuildValue( "d", value );
+}

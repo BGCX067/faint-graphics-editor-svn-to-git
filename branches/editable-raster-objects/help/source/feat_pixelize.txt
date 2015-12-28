@@ -1,0 +1,13 @@
+page:"Pixelize"
+summary:"Pixelize an image (by averaging pixels)"
+
+= Pixelize =
+Pixelizing an image replaces squares of pixels with their average
+value, in practice decreasing the resolution (but not the image size).
+
+|| image:feat_desaturate_color.jpg || image:feat_pixelize1.png || image:feat_pixelize2.png ||
+|| /The original image/ || / Pixelized with size 5 / || /Pixelized with size 10 /||
+
+== Method ==
+Pixelizing is only available from the Python interpreter:
+pixelize(pixel_size)

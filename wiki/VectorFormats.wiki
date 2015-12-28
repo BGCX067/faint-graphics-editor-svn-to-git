@@ -1,0 +1,73 @@
+#summary Overview of the support for vector formats in Faint
+
+= SVG =
+SVG was initially regarded as the save/load format for vector-images drawn in Faint, with no aim to support general SVG from other applications. A surprising amount of SVG images load OK however.
+
+The current goal for SVG is that anything saved to SVG with Faint should look correct in other viewers and be read back identically by Faint.
+
+= PDF =
+PDF support was added later, and is less stable (or more of a hack, if you will) than SVG. Faint can load the PDF:s  it has saved, but there is no support for opening PDF:s in general.
+
+= Per-feature overview =
+||Feature||PDF||SVG||Comments||
+|| *Multiple frames/pages* || X || || ||
+|| *Raster background* || ||X|| Work in progress for PDF since r2731 ||
+|| *Line* ||
+|| Available || X || X || ||
+|| Solid || X || X || ||
+|| Dashed || X || X || ||
+|| Line width || X || X || ||
+|| Arrow head || X || X~|| Color in SVG incorrect ||
+|| Rotation || N/A || N/A || Rotation not currently used for lines ||
+|| *Spline* ||
+|| Available || X || X || ||
+|| Solid || X || X || ||
+|| Dashed || X || X || ||
+|| Line width || X || X || ||
+|| Arrow head || || || Not yet available in Faint nor formats||
+|| Rotation || X || X || ||
+|| * Rectangle * ||
+|| Available || X || X || ||
+|| Solid || X || X || ||
+|| Dashed || X || X || ||
+|| Line width || X || X || ||
+|| Fill styles || X || X || ||
+|| Rotation || X || X || ||
+|| * Ellipse * ||
+|| Available || X || X || ||
+|| Solid || X || X || ||
+|| Dashed || X || X || ||
+|| Line width || X || X || ||
+|| Fill styles || X || X || ||
+|| Rotation ||  || X ||  ||
+|| * Polygon * ||
+|| Available || X || X || ||
+|| Solid || X || X || ||
+|| Dashed || X || X || ||
+|| Line width || X || X || ||
+|| Fill styles || X || X || ||
+|| Rotation || X || X || ||
+|| *Text * ||
+|| Available ||	X || X || ||
+|| Font || || X || No support at all in PDF ||
+|| Position || || ? || Wrong offset in PDF, not very tested in SVG ||
+|| Rotation || || X || ||
+|| ~~Background~~ || N/A || N/A  || Feature removed ||
+|| Multi-line ||  || X || ||
+|| Bold, italic || || X || ||
+|| *Group* ||
+|| Available || X || X || ||
+|| Rotation || X || X ||  ||
+|| Scaling || X || X || ||
+|| * Path * ||
+|| Available || || X || ||
+|| Solid || || X || ||
+|| Dashed || || X || ||
+|| Line width || || X || ||
+|| Fill styles || || X || ||
+|| Rotation || || X || ||
+|| * Raster object * ||
+|| Available || || X || ||
+
+||Feature||PDF||SVG||Comments||
+||Gradient fills||?||Direction lost|| ||

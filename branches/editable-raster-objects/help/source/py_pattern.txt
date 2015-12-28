@@ -1,0 +1,13 @@
+page:"Pattern"
+summary:"Class representing bitmap patterns"
+
+= Pattern =
+image:py_detached_copy.png
+
+The Pattern class represents fill-\ref(color_pattern,patterns).
+
+== Pattern methods ==
+!methoddef(py-pattern.cpp,Pattern_methods)
+
+---
+See also \ref(py_lineargradient.txt), \ref(py_radialgradient.txt), \ref(py_set_fg), \ref(py_bitmap.txt).

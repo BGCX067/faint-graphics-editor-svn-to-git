@@ -1,0 +1,10 @@
+page:"Something"
+summary:"Class representing Faint Objects"
+
+= Something =
+image:py_modifies_state.png
+
+The ill-named Something-class references a Faint object in a Canvas.
+
+== Something methods ==
+!methoddef(py-something.cpp,smth_methods)

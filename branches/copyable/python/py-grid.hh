@@ -1,0 +1,66 @@
+// -*- coding: us-ascii-unix -*-
+// Copyright 2013 Lukas Kemmer
+//
+// Licensed under the Apache License, Version 2.0 (the "License"); you
+// may not use this file except in compliance with the License. You
+// may obtain a copy of the License at
+//
+// http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+// implied. See the License for the specific language governing
+// permissions and limitations under the License.
+
+#ifndef FAINT_PY_GRID_HH
+#define FAINT_PY_GRID_HH
+#include "geo/geo-fwd.hh"
+#include "python/mapped-type.hh"
+#include "util/id-types.hh"
+#include "util/template-fwd.hh"
+
+namespace faint{
+class Canvas;
+class Grid;
+
+class CanvasGrid{
+public:
+  explicit CanvasGrid(Canvas* in_canvas)
+    : canvas(in_canvas)
+  {}
+  Canvas* canvas;
+};
+
+extern PyTypeObject GridType;
+typedef struct {
+  PyObject_HEAD
+  Canvas* canvas;
+  CanvasId canvasId;
+} gridObject;
+
+// Returns a grid object targetting the specified canvas.
+// If the specified canvas is 0, the grid object will
+// always target the active canvas.
+PyObject* py_grid_canvas(Canvas*);
+
+// Returns the Grid object from this gridObject
+// Sets a Python-error unless the grid is OK.
+Optional<Grid> get_grid(gridObject*);
+
+// Returns true if the canvas for the grid exists.
+// Otherwise, sets a python error and returns false.
+bool grid_ok(gridObject*);
+
+template<>
+struct MappedType<const CanvasGrid&>{
+  typedef gridObject PYTHON_TYPE;
+};
+
+CanvasGrid get_cpp_object(gridObject*);
+bool faint_side_ok(gridObject*);
+void show_error(gridObject*);
+
+} // namespace
+
+#endif

@@ -1,0 +1,16 @@
+page:"Tri"
+summary:"Class representing the transformation of an Object"
+
+= Tri =
+\image(py_detached_copy.png)
+
+Objects of the Tri class define the scale, rotation and skewness of
+the bounding box for objects.
+
+\image(tri.png) \image(tri-skew.png)
+
+== Tri properties ==
+\getsetdef(..\python\py-tri.cpp)
+
+== Tri methods ==
+\methoddef(py-tri.cpp,tri_methods)

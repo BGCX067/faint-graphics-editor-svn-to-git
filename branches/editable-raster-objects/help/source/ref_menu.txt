@@ -1,0 +1,95 @@
+page:"Menu"
+summary:"Menu items"
+
+tablestyle:3
+tablewidths:10%,10%,*
+
+= Menu reference =
+
+This section is an overview of all menu items.
+
+== File Menu ==
+The file menu has commands for file handling, such as loading and saving.
+
+|| *Menu option* || *Quick key* || *Description* ||
+|| New || Ctrl+N || Create a new image in a new tab. ||
+|| Open || Ctrl+O || Open an image in a new tab.\br See \ref(formats.txt,formats) for a list of supported formats. ||
+|| Open Recent || || A submenu containing recently used files. ||
+|| Save || Ctrl+S || Save the image in the currently selected tab to its file. ||
+|| Save As || Ctrl+Shift+S || Save the image in the currently selected tab to a new file. See \ref(formats.txt,formats) for a guide to which format to use. ||
+|| Exit || Alt+F4 || Exit Faint ||
+
+== Recent Files ==
+A sub menu to the File menu. Contains a list of recent files, if any.
+
+|| *Menu option* || *Quick key* || *Description* ||
+|| Open All || || Opens all files in the list. ||
+|| Clear/Undo Clear || || Clears the recent files list/undoes clearing. ||
+|| Files 1-9 || || Each entry opens the indicated file. ||
+
+== Edit Menu ==
+The edit menu has commands that alter the active image or selection.
+
+|| *Menu option* || *Quick key* || *Description* ||
+|| Undo || Ctrl+Z || Revert the previous change. ||
+|| Redo || Ctrl+Y || Redo the last undone change. ||
+|| Cut || Ctrl+X || Remove the selected raster area or the selected objects and place them in the clipboard.  ||
+|| Copy || Ctrl+C || Copy the selected raster area or the selected objects to the clipboard.  ||
+|| Paste || Ctrl+V || Paste graphics or objects from the clipboard. ||
+|| Paste New || Ctrl+Shift+V || Paste graphics or objects from the clipboard to a new image. ||
+|| Crop || Ctrl+Alt+C || \ref(feat_crop.txt,Crop) the image to the selection, or auto-crop. ||
+|| Delete || Del || Replace the selected raster area with the background color or delete the selected object. See \ref(feat_delete.txt).||
+|| Select All || Ctrl+A || Select the entire \ref(feat_raster_selection.txt,raster area) or all \ref(feat_object_selection.txt,objects). Switches to the raster or object selection tool. ||
+|| Select None || Ctrl+D || Deselects everything. ||
+|| Python Console || F8 || Opens the \ref(gui_python_console.txt,Python scripting console) ||
+
+== View ==
+The view menu has commands that affect the view of the active
+document, such as maximizing the document to screen and zooming, or
+hiding parts of the Faint-window.
+
+|| *Menu option* || *Quick key* || *Description* ||
+|| Zoom In || + || Zooms in one step. ||
+|| Zoom Out || - || Zooms out one step. ||
+|| Zoom 1:1/Zoom Fit || * || Zooms to 100% (actual size) or zooms to fit view if already at 100% ||
+|| Tool Panel || || Hides or shows the \ref(gui_tool_panel.txt,tool selection panel) ||
+|| Status Bar ||  || Hides or shows the \ref(gui_status_bar.txt,status bar) ||
+|| Color Panel || || Hides or shows the \ref(gui_color_panel.txt,color panel) ||
+|| Maximize || Alt+Enter || Maximizes the Faint Window ||
+|| Full Screen || F11 || Shows the active canvas across the entire screen ||
+
+== Objects ==
+The Objects menu has commands that affect selected (or sometimes all-) objects.
+
+|| *Menu option* || *Quick key* || *Description* ||
+|| Group Objects || Ctrl+G || Combines the selected objects into a group. ||
+|| Ungroup Objects || Ctrl+U || Disbands the selected groups of objects. ||
+|| Move Forward || F || Moves the selected objects higher (in front-) compared to other objects. ||
+|| Move Backward || B || Moves the selected objects lower (behind-) compared to other objects. ||
+|| Bring to Front || Ctrl+F || Moves the selected objects to the top, in front of all other objects. ||
+|| Move to Back || Ctrl+B || Moves the selected objects to the back, behind all other objects. ||
+|| Flatten || Ctrl+Space || Draws all, or the selected, objects onto the background and removes the objects. See \ref(feat_flatten.txt). ||
+
+== Image ==
+The Image menu has commands that affect the entire image, the selection or the selected objects.
+
+|| *Menu option* || *Quick key* || *Description* ||
+|| Brightness/Contrast || || Open the \ref(gui_brightness_contrast_dialog.txt,brightness contrast dialog), for adjusting the image brightness and contrast. ||
+|| Threshold || || Open the \ref(gui_threshold_dialog.txt,threshold dialog), for thresholding the image into white and black pixels. ||
+|| Flip/Rotate || Ctrl+R || Open a dialog for rotating the image, the selected objects or the raster selection. ||
+|| Resize || Ctrl+E || Open the \ref(gui_resize_dialog.txt,resize dialog), for resizing the drawing area or scaling the image. ||
+
+== Tabs ==
+The Tabs menu has commands for switching and closing tabs.
+
+|| *Menu option* || *Quick key* || *Description* ||
+|| Next Tab || Ctrl+Tab || Activates the next tab (image)||
+|| Previous Tab || Ctrl+Shift+Tab || Activates the previous tab (image) ||
+|| Close || Ctrl+W || Closes the active tab (image) ||
+
+== Help ==
+The Help menu is used to access the help system and information about Faint.
+
+|| *Menu option* || *Quick key* || *Description* ||
+|| Help Index || F1 || Opens the Faint documentation ||
+|| About || || Opens the About dialog with information about the Faint version ||

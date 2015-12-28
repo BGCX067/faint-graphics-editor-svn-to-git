@@ -1,0 +1,14 @@
+page:"Window"
+summary:"The Window class modifies the Faint application window"
+
+= Window =
+image:py_modifies_state.png
+
+Methods on the window class are used to modify the Faint application window.
+Use the window-object to access the methods.
+
+== Window methods ==
+!methoddef(py-app-objects.cpp,faintwindow_methods)
+
+---
+See also \ref(py_interpreter.txt).

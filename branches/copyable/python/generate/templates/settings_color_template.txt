@@ -1,0 +1,21 @@
+int settings_set_$name( settingsObject* self, PyObject* sequence, void* ){
+  // From settings_color_template.txt
+
+  faint::Paint paint;
+  if ( !parse_paint( sequence, paint ) ){
+    return faint::setter_fail;
+  }
+  self->settings->Set( $setting, paint );
+  return faint::setter_ok;
+}
+
+static PyObject* settings_get_$name( settingsObject* self, PyObject*, void* ){
+  // From settings_color_template.txt
+
+  if ( !self->settings->Has( $setting ) ){
+    PyErr_SetString( PyExc_ValueError, "$prettyname not set" );
+    return nullptr;
+  }
+  faint::Paint paint( self->settings->Get($setting) );
+  return build_paint(paint);
+}

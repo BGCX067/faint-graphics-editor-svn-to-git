@@ -1,0 +1,25 @@
+int settings_set_$name( settingsObject* self, PyObject* args, void* ){
+  if ( !PyNumber_Check( args ) ){
+    PyErr_SetString(PyExc_ValueError, "$setting must be a number");
+    return -1;
+  }
+  faint::coord value = PyFloat_AsDouble( args );
+
+  if ( value < $min_value  || $max_value < value ){
+    PyErr_SetString( PyExc_ValueError, "Argument outside range [$min_value, $max_value]." );
+    return -1;
+  }
+  self->settings->Set( $setting, value );
+  return 0;
+}
+
+static PyObject* settings_get_$name( settingsObject* self, PyObject*, void* ){
+  if ( self->settings->Has( $setting ) ){
+    return Py_BuildValue("d", self->settings->Get( $setting ) );
+  }
+  else {
+    PyErr_SetString( PyExc_ValueError, "$prettyname not set" );
+    return 0;
+  }
+}
+

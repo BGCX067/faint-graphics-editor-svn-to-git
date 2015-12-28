@@ -1,0 +1,23 @@
+page:"Tool Reference"
+
+= Tool reference =
+This section describes all tools in Faint. For an introduction to the tool concept, see instead the \ref(tools.txt) section.
+
+In the following table, \image(supports_raster.png) indicates a tool which can target raster graphics, while
+\image(supports_object.png) indicates a tool which can target objects (see \ref(raster-vs-object.txt)).
+
+|| *Icon* || *Name* || *Description* || ||
+||\graphic(tool-rectsel.png)|| \ref(tool_raster_selection,Raster Selection) || Selects a region to move or modify || \image(supports_raster.png) ||
+||\graphic(tool-selobject.png)|| \ref(tool_object_selection,Object Selection) || Selects and adjusts objects || || \image(supports_object.png) ||
+||\graphic(tool-pen.png)|| \ref(tool_pen,Pen) || Freehand-drawing || \image(supports_raster.png) || ||
+||\graphic(tool-brush.png)|| \ref(tool_brush,Brush) || Like the pen, but more luxurious  || \image(supports_raster.png) || ||
+||\graphic(tool-picker.png)|| \ref(tool_picker,Color Picker) || Selects colors from the image || \image(supports_raster.png) || \image(supports_object.png) ||
+||\graphic(tool-line.png)|| \ref(tool_line,Line) || Draws lines || \image(supports_raster.png) || \image(supports_object.png) ||
+||\graphic(tool-path.png)|| \ref(tool_path,Path) || Draws arbitrary shapes || \image(supports_raster.png) || \image(supports_object.png) ||
+||\graphic(tool-spline.png)|| \ref(tool_spline,Spline) || Draws curved lines || \image(supports_raster.png) || \image(supports_object.png) ||
+||\graphic(tool-rectangle.png)|| \ref(tool_rectangle,Rectangle) || Draws rectangles || \image(supports_raster.png) || \image(supports_object.png) ||
+||\graphic(tool-ellipse.png)|| \ref(tool_ellipse,Ellipse) || Draws ellipses || \image(supports_raster.png) || \image(supports_object.png) ||
+||\graphic(tool-polygon.png)|| \ref(tool_polygon,Polygon) || Draws polygons || \image(supports_raster.png) || \image(supports_object.png) ||
+||\graphic(tool-text.png)|| \ref(tool_text,Text) || Writes text || \image(supports_raster.png) || \image(supports_object.png) ||
+||\graphic(tool-floodfill.png)|| \ref(tool_fill,Fill) || Fills contiguous areas with color<br>replaces colors in objects || \image(supports_raster.png) || \image(supports_object.png) ||
+||\graphic(tool-level.png)|| \ref(tool_level,Level) || Rotate the image to align the horizon || \image(supports_raster.png) || \image(supports_object.png) ||

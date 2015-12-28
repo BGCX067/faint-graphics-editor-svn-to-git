@@ -1,0 +1,24 @@
+page:feat_delete.html "Delete Selection"
+summary:"Clearing a region or deleting the selected objects"
+
+= Delete Selection =
+The Delete function deletes the -feat_raster_selection.txt,raster selection- or the -feat_object_selection.txt,selected objects-.
+
+== Method ==
+* Menu: Edit->Delete (Key: Delete)
+* Python: context_delete()
+
+== Deleting objects ==
+In object mode, selected objects can be deleted.
+
+|| image:object_selection_cutout.png || image:feat_delete_objects_pre.png || image:feat_delete_objects_post.png ||
+|| Using object selection || Two objects are selected || The selected objects are deleted ||
+
+== Deleting a raster region ==
+In raster mode, the selected region can be deleted. The content in the region is
+replaced with the secondary color.
+
+|| image:raster_selection_cutout.png image:feat_delete_raster_yellow_bg.png || image:feat_delete_raster_pre.png || image:feat_delete_raster_post.png ||
+|| Using raster selection and\yellow secondary color || A region is selected with the\ raster selection tool || Delete replaces the selected\ region with the secondary color ||
+
+See -feat_dwim_delete.txt- for a way to erase with the surrounding color, or use the -tool_picker,Color picker- to select the secondary color.

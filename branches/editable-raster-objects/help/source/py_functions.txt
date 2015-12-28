@@ -1,0 +1,7 @@
+page:"Functions"
+summary:"List of Faint Python functions"
+
+= Functions =
+This is a list of all Faint-specific built in Python functions.
+
+!methoddef(py-functions.cpp,faint_interface_methods)

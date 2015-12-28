@@ -1,0 +1,4 @@
+page:"Color Panel"
+summary:"The color panel"
+
+= Color Panel =

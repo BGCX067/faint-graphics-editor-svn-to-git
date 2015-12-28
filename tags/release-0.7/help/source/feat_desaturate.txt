@@ -1,0 +1,23 @@
+page:feat_desaturate.html "Desaturate"
+summary:"Replacing color in an image with gray-scale"
+
+= Desaturate =
+Desaturating the image replaces all colors with gray-scale
+equivalents.  There are two alternate methods, one which takes
+apparent weights of colors in account and an unweighted variant which
+values the red, green and blue components the same.
+
+|| image:feat_desaturate_color.png || image:feat_desaturate_weighted.png || image:feat_desaturate_unweighted.png ||
+|| /Color image/ || /Weighted desaturation/ || /Unweighted desaturation/ ||
+
+== Method ==
+Desaturating is only available from the Python interpreter. These are
+the functions:
+
+*Free functions*
+|| desaturate() || Desaturates the active image ||
+|| desaturate_weighted() || Weighted desaturation of the active image ||
+
+*Image Methods*
+|| image.desaturate() || Desaturates the specified image ||
+|| image.desaturate_weighted() || Weighted desaturation of the specified image ||

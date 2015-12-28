@@ -1,0 +1,7 @@
+page:"JPEG"
+summary:"A compressed format suitable for photographs"
+
+image:fmt_flatten.png image:fmt_lossy.png
+
+= JPEG =
+A compressed raster format suitable for photographs.

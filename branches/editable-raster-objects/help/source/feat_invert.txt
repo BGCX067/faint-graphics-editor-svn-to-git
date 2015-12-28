@@ -1,0 +1,17 @@
+page:"Invert"
+summary:"Invert image colors"
+
+= Invert =
+Inverts the colors in the image.
+
+|| image:feat_desaturate_color.jpg || image:feat_invert.jpg ||
+
+== Method ==
+Invert is only available from the Python interpreter.
+
+*Free functions*
+|| withbind:invert(); || Inverts the active image ||
+|| invert(i1, i2, ...) || Inverts the specified images ||
+
+*Image methods*
+|| image.invert() || Inverts the specified image ||

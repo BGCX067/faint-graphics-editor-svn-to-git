@@ -1,0 +1,18 @@
+page: introduction.html "Introduction"
+= Introduction to Faint =
+
+The Faint interface is meant to look rather bare, leaving most of the
+screen space for the edited image. An example of what it might look like follows:\
+image:faint_overview.png
+
+*Item*\
+1 Select raster or object layer. See -rasterandobject-.\
+2 Select active tool. See -tools.txt-.\
+3 Alter the settings for the selected tool or object. See -tools.txt- and -objects.txt-.\
+4 Selected foreground and background color. Double click either to open the color dialog. Right click for options. See -color-\
+5 Context help - look here for instructions while drawing,for information about hovered items in the user interface.\
+6 Palette, left click to select foreground color, right for background. Double click for color dialog. See -color-\
+7 Tool feedback, shows lengths, angles, areas, mouse position etc. depending on the active tool\
+8 Zoom panel, used to zoom in, out or to default 1:1\
+9 Resize/Rescale handles. Left click and hold to resize the drawing area, right click and hold to scale the image.\
+10 Tabs for switching between images, and for splitting the view.

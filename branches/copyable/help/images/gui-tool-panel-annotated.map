@@ -1,0 +1,12 @@
+0,12,135,35 tool-raster-selection.txt
+0,37,135,60 tool-pen.txt
+0,62,135,85 tool-picker.txt
+0,87,135,110 tool-spline.txt
+0,112,135,135 tool-ellipse.txt
+0,137,135,160 tool-text.txt
+137,12,270,35 tool-object-selection.txt
+137,37,270,60 tool-brush.txt
+137,62,270,85 tool-line.txt
+137,87,270,110 tool-rectangle.txt
+137,112,270,135 tool-polygon.txt
+137,137,270,160 tool-fill.txt

@@ -1,0 +1,25 @@
+page:"ImageProps"
+summary:"Interface for creating images in custom file format load functions"
+
+= ImageProps =
+image:py_modifies_state.png
+
+ImageProps instances are passed to load-functions that have been
+added with add_format when loading a file type matching that format.
+
+The ImageProps objects are the interface to the new image while
+loading, and is used to add and retrieve FrameProps and to signal
+errors and warnings.
+
+ImageProps objects merely contain the frames, while
+\ref(py_frameprops.txt) objects are used to modify the pixel data or
+object content while loading. For animated formats, one FrameProps
+should be created for each frame. Load functions for unanimated
+formats must use add_frame once to create a FrameProps to access their
+single frame.
+
+== ImageProps methods ==
+!methoddef(py-imageprops.cpp,imageprops_methods)
+
+---
+See also \ref(py_frameprops.txt)

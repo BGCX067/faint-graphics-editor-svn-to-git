@@ -1,0 +1,4 @@
+page:gui_color_panel.html "Color Panel"
+summary:"The color panel"
+
+= Color Panel =

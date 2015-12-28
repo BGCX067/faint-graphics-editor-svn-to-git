@@ -1,0 +1,2 @@
+// Resources for MSW, adds the icon for the executable
+50 ICON "icon.ico"

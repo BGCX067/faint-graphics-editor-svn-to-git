@@ -1,0 +1,11 @@
+PyObject* set_$name( PyObject*, PyObject* args ){
+  char* s_value;
+  if ( !PyArg_ParseTuple( args, "s", &s_value ) ){
+    return nullptr;
+  }
+  $string_to_int
+
+  AppContext& app = GetAppContext();
+  app.Set( $setting, to_int(value) );
+  return Py_BuildValue("");
+}

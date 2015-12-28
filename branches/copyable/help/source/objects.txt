@@ -1,0 +1,37 @@
+page:"Objects"
+summary:"Working with Objects"
+= Objects =
+Many \ref(tools.txt,tools) create objects when they're used in the object
+mode. \br
+As an example, the line tool adds adjustable lines in the object mode.
+
+To work with objects, select the object mode:\br
+\image(select_vector.png)
+
+|| \image(icon_info.png) || When using objects, it is often best to save the image in a vector \ref(formats.txt,format). ||
+
+== Selecting objects ==
+Objects can be adjusted while they are selected. There are several ways to select objects.\br
+Edit->Select All (Ctrl+A) selects all objects in the image (if the Object mode is active).
+
+The \graphic(tool-selobject.png) \ref(tool_object_selection,object selection tool) either draws a rectangle to select all
+objects within, or selects individual clicked objects.
+
+\image(object_selection_cutout.png)
+
+\image(select_objects.png)
+
+If Ctrl is held, the clicked objects, or objects within the drawn rectangle, will be deselected.
+
+For more object selection details, see \ref(feat-object-selection.txt,Feature Reference/Object Selection).
+
+== Object settings/appearance ==
+When the object selection tool is used, changes to settings will affect the selected
+objects, instead of the tools.\br
+\image(object_settings.png)
+
+== Point editing ==
+Lines, polygons and paths are constructed from multiple points which can be adjusted independently. Ellipses also have adjustable points used to limit them to arc segments. To edit the points such an object, select it with the object selection tool and enable 'Edit points'.
+
+|| \graphic(edit-points.png) || \image(editable-polygon.png) ||
+|| The edit points setting. || A polygon with editable points ||

@@ -1,0 +1,4 @@
+page:"Status bar"
+summary:"The status bar for tool feedback"
+
+= Status Bar =

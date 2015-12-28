@@ -1,0 +1,14 @@
+page:"Threshold Dialog"
+summary:"Dialog for specifying an intensity range that is set to white, while the rest is set to black"
+
+= The threshold dialog =
+The threshold dialog is used to specify an intensity threshold for
+which all pixels are set to white, while all pixels outside are set to
+black.
+
+image:gui_threshold_dialog.png
+
+To open the threshold dialog use Image->Threshold,
+or the Python function withbind:dialog_threshold();.
+
+See \ref(feat_threshold.txt) for more details.

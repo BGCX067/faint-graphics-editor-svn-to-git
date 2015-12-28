@@ -1,0 +1,91 @@
+page:"Binding functions to Keys"
+
+= Binding functions to keys =
+Python-functions with no arguments can be connected to keyboard keys
+for quick access. This can be used to trigger commands (or
+combinations of commands). It can also be used to re-map navigation
+controls, like scrolling or selecting an image, or for selecting
+commonly used tools with specific settings using a single key-press.
+
+For a list of the currently bound keys, see \ref(binds.txt).
+
+The Python function 'bind' is used for interactive binding, while 'bindc'
+and 'bindk' are used to specify binds in the configuration file.
+
+== Interactive, bind() ==
+To bind a function to a key interactively, use the Python function
+*bind* in the interpreter window. This function takes one argument,
+the function to bind, and then waits for a keypress.
+
+*Signature:*
+{{{
+<font face="courier">bind(function)</font>
+}}}
+
+---
+'Example, binding the \ref(feat-invert.txt,invert)-function'
+
+\py_example(python_bind_keys.notpy)
+---
+
+By then pressing a key, say "H", the invert-function would be bound to
+the H-key. Images can then be inverted by pressing H when the Faint
+window has focus. More complex binds can be specified by holding Ctrl,
+Alt or Shift (or combinations) and then pressing a key.
+
+|| \image(icon_info.png) || Binds specified from the interpreter with 'bind' are lost when Faint is closed. For permanent binding, use the 'bindc' and 'bindk' functions in your \ref(feat-config-file.txt,configuration file) instead.||
+
+== Non-interactive, bindc() and bindk() ==
+The regular bind() function requires an interactive key-press and is
+therefore not useful for specifying binds in the ini file. For this,
+the alternative bindc and bindk functions should be used. The bindc
+function accepts a character, specified as a string (e.g. "h"),
+a function and optional modifiers.
+
+*Signature, bindc:*
+{{{
+<font face="courier">bindc(ch,function,modifiers)</font>
+}}}
+
+---
+'bindc examples'\br
+\py_example(python_bind_keys_bindc.py)
+---
+
+The bindk-function accepts a keycode instead of a character, and can be used to bind keys
+which do not represent a character, such as 'Home' or 'Space'.
+
+*Signature, bindk:*
+{{{
+<font face="courier">bindk(key, function, modifiers)</font>
+}}}
+
+---
+'bindk Examples'\br
+\py_example(python_bind_keys_bindk.py)
+---
+
+= Global binds =
+There are also global-variants of bind, bindc and bindk.
+
+{{{
+<font face="courier">bind_global(function)<br>
+bindk_global(ch,function,modifiers)<br>
+bindk_global(key,function,modifiers)<br></font>
+}}}
+
+Binds specified using any of these functions will trigger regardless
+of which Faint window or entry field has focus.
+
+|| \image(icon_warn.png) || Avoid using keys that are required for text entry as global binds. ||
+
+= Binding functions with parameters =
+
+When a bound function is invoked, it is always called with no
+arguments. If you need to bind a function with a predetermined
+parameter, a Python lambda-wrapper can be useful:
+
+\py_example(python_bind_keys_lambda.py)
+
+For other tasks, using a named wrapper function is easier:\br
+\py_example(python_bind_keys_wrapper.py)

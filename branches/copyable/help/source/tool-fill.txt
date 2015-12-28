@@ -1,0 +1,16 @@
+page:"Fill tool"
+summary:"Fill regions or replace colors"
+
+= \graphic(tool-floodfill.png) Fill =
+label:tool_fill
+The fill tool replaces the color in a contiguous area with the current
+primary or secondary color. It can also be used to replace a colors in
+the entire image or all colors within a bounding color.
+
+|| \image(tool-fill-unchanged.png)||\image(tool-fill-flood.png)|| \image(tool-fill-boundary.png)||
+|| Before fill || Flood filled (default) || Boundary fill (Shift) ||
+
+*Keyboard modifiers*
+||\image(key_shift.png)\image(key_ctrl.png)|| If Shift+Ctrl is held when clicking, all colors other than the clicked will be replaced (\ref(feat-erase-but-color.txt)). ||
+||\image(key_shift.png)|| If Shift is held when clicking, all colors within a boundary of the secondary color will be set to the primary color. (\ref(feat-boundary-fill.txt)). ||
+||\image(key_ctrl.png)|| If Ctrl is held when clicking, the clicked color will be replaced in the entire image (\ref(feat-replace-color.txt)). ||

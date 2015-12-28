@@ -1,0 +1,21 @@
+int settings_set_$name( settingsObject* self, PyObject* args, void* ){
+  if ( !PyBool_Check( args ) ){
+    PyErr_SetString( PyExc_ValueError, "Argument is not boolean" );
+    return faint::setter_fail;
+  }
+
+  bool value = (args == Py_True);
+  self->settings->Set( $setting, value );
+  return faint::setter_ok;
+}
+
+static PyObject* settings_get_$name( settingsObject* self, PyObject*, void* ){
+  if ( self->settings->Has( $setting ) ){
+    bool value = self->settings->Get( $setting );
+    return python_bool(value);
+  }
+  else {
+    PyErr_SetString( PyExc_ValueError, "$prettyname not set" ); // Fixme
+    return nullptr;
+  }
+}

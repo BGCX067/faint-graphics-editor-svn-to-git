@@ -1,0 +1,11 @@
+page:"App"
+summary:"Interface for Faint application settings"
+
+= App =
+image:py_modifies_state.png
+
+Interface for Faint application settings.
+The Application object is accessed via the "app"-object.
+
+== App methods ==
+!methoddef(py-app.cpp,faintapp_methods)

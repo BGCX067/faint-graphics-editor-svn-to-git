@@ -1,0 +1,23 @@
+page:"Settings"
+summary:"Tool and object settings"
+
+= Settings =
+Settings affect tools and objects.
+
+|| *Icon* ||*Setting*||*Applies to*||
+|| image:linewidth.png ||Line width||Line, Polygon, Spline, Path||
+|| graphic:linestyle-solid.png graphic:linestyle-long-dash.png ||Line style||Line, Polygon, Spline, Path||
+|| image:na.png ||Line cap||Line, Polygon, Spline, Path||
+|| image:na.png ||Line join||Polyline, Polygon, Spline, Path||
+|| graphic:line-no-arrow.png graphic:line-arrow-front.png ||Arrowhead||Arrow Line, Polyline||
+|| image:setting_fg.png ||Foreground color||Most||
+|| image:setting_bg.png ||Background color||Most||
+|| graphic:line-polyline.png ||Polyline||Line tool||
+|| graphic:fillstyle-border.png graphic:fillstyle-fill.png \br graphic:fillstyle-border-and-fill.png ||Fill style||Rectangle, Ellipse, Polygon, Path||
+|| image:brush_size.png ||Brush size||Brush tool||
+|| image:fontsize.png ||Font size||Text||
+|| image:fontface.png ||Font face||Text||
+|| graphic:choice-transparent.png graphic:choice-opaque.png ||Background style||Raster selection, Raster object||
+|| graphic:layer-raster.png graphic:layer-vector.png ||Layer type||Most||
+|| graphic:brush-rect.png graphic:brush-circle.png ||Brush shape||Brush tool||
+|| graphic:edit-points.png ||Edit points||Line, Polygon, Spline, Path||

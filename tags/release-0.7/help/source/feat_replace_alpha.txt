@@ -1,0 +1,14 @@
+page:feat_replace_alpha.html "Replace Alpha"
+summary:"Python function for blending alpha values towards a color"
+
+= Replace Alpha =
+Replace Alpha blends pixels with alpha values onto the specified color.
+
+|| image:feat_replace_alpha_pre.png || image:feat_replace_alpha_white.png || image:feat_replace_alpha_magenta.png || image:feat_replace_alpha_red.png ||
+|| Original image with alpha || Blended towards white || Blended towards magenta || Blended towards red ||
+
+== Method ==
+Replace Alpha is only available from the Python interpreter.
+
+*Image Methods*
+|| image.replace_alpha(r,g,b) || Blend alpha values in the image towards the specified rgb-color ||

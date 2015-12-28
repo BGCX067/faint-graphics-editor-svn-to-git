@@ -1,0 +1,12 @@
+page:"RadialGradient"
+summary:"Class representing radial gradients"
+
+= RadialGradient =
+\image(py_detached_copy.png)
+
+The RadialGradient class represents radial color \ref(color_gradient,gradients).
+
+== RadialGradient methods ==
+\methoddef(py-radial-gradient.cpp,RadialGradient_methods)
+---
+See also \ref(py-lineargradient.txt).

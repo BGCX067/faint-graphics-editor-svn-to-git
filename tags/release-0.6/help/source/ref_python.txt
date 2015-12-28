@@ -1,0 +1,62 @@
+page:ref_python.html "Python Reference"
+
+= Python Reference =
+tablestyle:3
+== Application Settings ==
+The 'window' object is used to adjust the Faint main window.\
+Example:\
+window.maximize() # Maximizes the window
+
+||*Method*||*Description*||
+||window.maximize()||Maximies or demaximizes the Faint-window||
+
+The 'palette' object is used to adjust the palette contents.
+||*Method*||*Description*||
+||palette.add(r,g,b[,a])||Adds the color specified by the rgba values to the palette||
+
+The 'interpreter' object is used to adjust the Python interpreter window.
+||*Method*||*Description*||
+||interpreter.set_background(r,g,b)||Sets the interpreter background color to rgb||
+||interpreter.set_text_color(r,g,b)||Sets the interpreter text color to rgb||
+||interpreter.maximize()||Maximizes or restores the interpreter||
+
+
+
+== Canvas objects ==
+Canvas-instances are used to adjust individual images that are opened in tabs in Faint.
+The function list_images() retrieves a list of all canvases, and get_active_canvas() returns the active canvas.
+A lot of functions forward to the active canvas automatically, for example center(100,100) is equivalent to
+get_active_canvas().center(100,100)
+
+=== Related functions ===
+These non class functions are related to Canvas objects.
+||*Function*||*Description*||
+||get_active_canvas()||Returns the image from the currently active tab||
+||list_images()||Returns a list of all open images||
+
+=== Methods ===
+The Canvas methods are listed here. Note that some of them may be
+called as functions, and will then forward to the active canvas.
+
+||*Method*||*Description*||
+||line(x0,y0,x1,y1)||Draws a line from (x0,y0) to (x1,y1)||
+||rect(x,y, w, h)||Draws a rectangle with width w and height h at (x,y)||
+||ellipse(x,y, w, h)||Draws an ellipse with width w and height h at (x,y)||
+||Ellipse(x,y, w, h)||Adds an ellipse object with width w and height h at (x,y)||
+||Group( objects )|| Groups the listed and returns the new Group ||
+||Line( x0, y0, x1, y1 )||Adds a line object extending from (x0,y0) to (x1,y1)||
+||Path( path_description )||Adds a path object||
+||Polygon( ? )||Adds a Polygon object||
+||Raster( ? )||Adds a Raster object||
+||Rect( x, y, w, h )||Adds a Rectangle object at (x,y) with width and height (w,h)||
+||Spline( ? ) ||Adds a Spline object ... ||
+||Text( ? )||Adds a Text object ... ||
+
+== Objects ==
+get_selected(), get_objects() etc.
+
+== Tool Settings ==
+||*Function*||*Description*||
+||tool(id)||Selects the tool with the given integer id||
+||set_linewidth(w)||Sets the line width to the (floating point-) value w||
+||get_linewidth()||Returns the current line width||

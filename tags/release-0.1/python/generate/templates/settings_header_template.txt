@@ -1,0 +1,2 @@
+int settings_set_$name( settingsObject* self, PyObject* value, void* closure );
+static PyObject* settings_get_$name( settingsObject* self, PyObject* value, void* closure );

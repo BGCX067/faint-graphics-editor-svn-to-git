@@ -1,0 +1,19 @@
+page:"Boundary Fill"
+summary:"Replace colors within a region bounded by a different color"
+
+\image(feat_icon_raster.png) \image(feat_icon_tool.png) \image(feat_icon_scriptable.png)
+= Boundary fill =
+A boundary fill replaces all colors surrounded by a color with a
+different color.
+
+||\image(tool-fill-unchanged.png)||\image(tool-fill-boundary.png)||
+||Before boundary fill||After boundary fill||
+
+== Using the flood fill tool ==
+The \ref(tool_fill,flood fill tool) performs a boundary fill if Shift is held.
+
+== Using Python ==
+||boundary_fill( (x,y), fill_color, boundary_color)|| Boundary fill originating at x,y ||
+
+---
+See also \ref(feat-flood-fill.txt) for replacing contiguous colors.

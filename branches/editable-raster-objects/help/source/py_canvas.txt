@@ -1,0 +1,17 @@
+page:"Canvas"
+summary:"Class representing images opened in Faint"
+
+= Canvas =
+image:py_modifies_state.png
+
+Instances of the Canvas class are used to modify an image opened in
+Faint. Modifications to an image through the Canvas interface are
+undoable actions, just like the manual image editing.
+
+|| image:icon_info.png || The undo/redo overhead for each action makes the Canvas interface unsuitable for per-pixel modification. See instead \ref(py_bitmap.txt). ||
+
+== Canvas methods ==
+!methoddef(py-canvas.cpp,canvas_methods)
+
+---
+See also \ref(py_bitmap.txt).

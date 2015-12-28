@@ -1,0 +1,19 @@
+page:"User interface"
+summary:"Overview of the Faint user interface"
+= User interface =
+The Faint user interface is shown below. The indicated regions link to the documentation for that feature.
+
+\imagemap(gui-overview.map)
+
+*Item*\br
+1 Tabs for switching between images and for splitting the view. See \ref(gui-tabs.txt).\br
+2 Resize and rescale handles. Left click and hold to resize the drawing area, right click and hold to scale the image. See \ref(gui-image-resize-handles.txt).\br
+3 Select raster or object layer. See \ref(rasterandobject).\br
+4 Select active tool. See \ref(tools.txt).\br
+5 Alter the settings for the selected tool or object. See \ref(tools.txt) and \ref(objects.txt).\br
+6 Selected foreground and background color. Click to open the color dialog. Right click for options. See \ref(color.txt).\br
+7 Context help - look here for instructions while drawing,for information about hovered items in the user interface. See \ref(gui-status-bar.txt).\br
+8 Palette, left click to select foreground color, right for background. Double click for color dialog. See \ref(color.txt).\br
+9 Tool feedback, shows lengths, angles, areas, mouse position etc. depending on the active tool. See \ref(gui-status-bar.txt).\br
+10 Zoom controller, used to zoom in, out or to fit the window. See \ref(gui-zoom-control.txt).\br
+11 Grid controller. Click the button to enable the grid and open the grid options. See \ref(gui-grid-control.txt).

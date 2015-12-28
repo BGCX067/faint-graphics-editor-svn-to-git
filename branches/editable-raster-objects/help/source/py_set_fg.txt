@@ -1,0 +1,6 @@
+page:"set_fg"
+summary:"Function for setting the foreground color"
+
+= set_fg =
+label:py_set_fg
+|| set_fg(c) || Sets the foreground 'color' to c. The parameter can be either an rgba color tuple, a \ref(py_pattern.txt,pattern) or a \ref(py_lineargradient.txt,linear) or \ref(py_radialgradient.txt,radial) gradient||

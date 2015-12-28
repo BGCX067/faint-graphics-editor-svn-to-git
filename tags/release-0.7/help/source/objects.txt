@@ -1,0 +1,31 @@
+page:objects.html "Objects"
+= Objects =
+
+Many -tools.txt,tools- create objects when they're used in the object
+mode. \As an example, the line tool draws lines in the raster mode,
+but adds adjustable lines in the object mode.
+
+To work with objects, select the object mode:\
+image:select_vector.png
+
+|| image:icon_info.png || When using objects, it is often best to save the image in a vector -formats.txt,format-. ||
+
+== Selecting objects ==
+Objects can be adjusted while they are selected. There are several ways to select objects.\
+Edit->Select All (Ctrl+A) selects all objects in the image (if the Object mode is active).
+
+The graphic:toolicon_selobject.png -tool_object_selection,object selection tool- either draws a rectangle to select all
+objects within, or selects individual clicked objects.
+
+image:object_selection_cutout.png
+
+image:select_objects.png
+
+If Ctrl is held, the clicked objects, or objects within the drawn rectangle, will be deselected.
+
+For more object selection details, see -feat_object_selection.txt,Feature Reference/Object Selection-.
+
+== Object settings/appearance ==
+When the object selection tool is used, changes to settings will affect the selected
+objects, instead of the tools.\
+image:object_settings.png

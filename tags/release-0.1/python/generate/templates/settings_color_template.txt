@@ -1,0 +1,19 @@
+int settings_set_$name( settingsObject* self, PyObject* sequence, void* ){
+  faint::Color color;
+  if ( !ParseColor( sequence, color, true ) ){
+    return -1;
+  }  
+  self->settings->Set( $setting, color );
+  return 0;
+}
+
+static PyObject* settings_get_$name( settingsObject* self, PyObject*, void* ){
+  if ( self->settings->Has( $setting ) ){
+    faint::Color c = self->settings->Get( $setting );
+    return build_color_tuple( c );
+  }
+  else {
+    PyErr_SetString( PyExc_ValueError, "$prettyname not set" );
+    return 0;
+  }
+}

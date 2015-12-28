@@ -1,0 +1,16 @@
+page:"Settings"
+summary:"Class representing Faint tool or object settings"
+
+= Settings =
+\image(py_detached_copy.png)
+
+The Settings class represents tool or object settings. Note
+that Settings-objects are self contained (copies), they do not keep a
+reference to their source, so to affect a change in Faint, the
+settings must be passed to a function or method.
+
+== Settings properties ==
+\getsetdef(..\python\generate\output\py_settings_setget.hh)
+
+== Settings methods ==
+\methoddef(py-settings.cpp,settings_methods)

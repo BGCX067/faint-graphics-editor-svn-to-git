@@ -1,0 +1,51 @@
+page:scripting_intro.html "Scripting"
+= Scripting =
+
+Faint features an interactive interpreter for the Python programming language.\
+To start the interpreter, select Python Console in the Edit menu (or press F8).
+From this interpreter, most of what can be be done manually in Faint can be done
+programatically.
+
+This documentation only covers Python as it relates to Faint. For an
+introduction to Python, see www.python.org.
+
+Two simple examples on drawing from the interpreter and customizing
+settings follow.
+
+---
+'Draw a 640x480 grid of 10x10 squares to the active image'\
+{{{
+<font face="courier">
+for i in range(100):<br>
+&nbsp; line( 0, i*10, 640, i * 10 ) # Horizontal lines<br>
+&nbsp; line( i*10, 0, i*10, 480 ) # Vertical lines<br>
+</font>
+}}}
+---
+Typing the above code in the interpreter produces a grid of 10x10 pixel squares covering (0,0)-(640,480) in the
+active drawing area.
+
+The interpreter also allows customizing and extending Faint to make it
+more effective for your work. The example below shows how a keyboard
+key can be connected to several actions:
+---
+'Make the space-bar select the line tool, set line width to 10 and foreground color to blue'\
+{{{
+# A custom function that changes tool settings\
+def example_function():<br>
+&nbsp; tool(5)<br>
+&nbsp; set_linewidth(10)<br>
+&nbsp; set_fgcol(0,0,255)<br>
+<br>
+# Connecting the function to a key\
+bind( example_function )
+-&gt; [press key]
+}}}
+---
+
+= The Faint ini file =
+A user-specific python script file, .faint.py, is executed when Faint
+starts. This allows storing custom functions and key binds. The
+location of the ini file varies with operating systems. Fortunately,
+the Faint Python Console (F8) lists the location for the used ini
+file.

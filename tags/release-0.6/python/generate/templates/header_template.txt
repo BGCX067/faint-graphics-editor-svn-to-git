@@ -1,0 +1,2 @@
+PyObject* set_$name( PyObject* self, PyObject* args );
+PyObject* get_$name( PyObject* self, PyObject* args );

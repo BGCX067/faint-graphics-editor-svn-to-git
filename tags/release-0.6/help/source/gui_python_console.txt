@@ -1,0 +1,4 @@
+page:gui_python_console.html "Python Console"
+summary:"The Python scripting console"
+
+= Python Console =

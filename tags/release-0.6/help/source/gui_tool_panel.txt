@@ -1,0 +1,4 @@
+page:gui_tool_panel.html "Tool Panel"
+summary:"The tool selection panel"
+
+= Tool Panel =

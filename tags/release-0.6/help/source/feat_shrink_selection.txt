@@ -1,0 +1,17 @@
+page:feat_shrink_selection.html "Shrink Selection"
+summary:"Python function for clamping the raster selection to content"
+
+= Shrink Selection =
+Shrinks the -feat_raster_selection.txt,raster selection- to content, similar to an -auto_crop,auto crop-, but only for adjusting the selection.
+
+|| image:feat_shrink_selection_pre.png || image:feat_shrink_selection_post.png ||
+
+== Method ==
+Shrink Selection is only available from the Python interpreter.
+
+*Free functions*
+|| shrink_selection() || Shrinks the raster selection in the active image ||
+|| shrink_selection(i1, i2, ...) || Shrinks the selection in the specified images ||
+
+*Image methods*
+|| image.shrink_selection() || Shrinks the selection in the specified image ||

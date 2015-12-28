@@ -1,0 +1,202 @@
+page:"Tools"
+summary:"The tools available for drawing in Faint"
+= Tools =
+The toolbar to the left of the main frame contains the tools that are used to
+draw, or add objects to-, the drawing area.
+
+Most tools are available in both the raster and object modes.\br
+To select a tool, click its button in the toolbar.  Most tools do their
+thing when either mouse button is held with the cursor over the
+drawing area and the mouse is moved.
+
+Many of the tools use a foreground and a background color. If the
+left mouse button is used for drawing, the primary color will be used
+for foreground and the secondary for background.
+
+|| *Icon* || *Name* || *Description* || ||
+|| graphic:toolicon-rectsel.png || \ref(tool_raster_selection,Raster Selection) || Selects a region to move or modify || image:supports_raster.png ||
+|| graphic:toolicon-selobject.png || \ref(tool_object_selection,Object Selection) || Selects and adjusts objects || || image:supports_object.png ||
+|| graphic:toolicon-pen.png || \ref(tool_pen,Pen) || Freehand-drawing || image:supports_raster.png || ||
+|| graphic:toolicon-brush.png || \ref(tool_brush,Brush) || Like the pen, but more luxurious  || image:supports_raster.png || ||
+|| graphic:toolicon-picker.png || \ref(tool_picker,Color Picker) || Selects colors from the image || image:supports_raster.png || image:supports_object.png ||
+|| graphic:toolicon-line.png || \ref(tool_line,Line) || Draws lines || image:supports_raster.png || image:supports_object.png ||
+|| graphic:toolicon-spline.png || \ref(tool_spline,Spline) || Draws curved lines || image:supports_raster.png || image:supports_object.png ||
+|| graphic:toolicon-rectangle.png || \ref(tool_rectangle,Rectangle) || Draws rectangles || image:supports_raster.png || image:supports_object.png ||
+|| graphic:toolicon-ellipse.png || \ref(tool_ellipse,Ellipse) || Draws ellipses || image:supports_raster.png || image:supports_object.png ||
+|| graphic:toolicon-polygon.png || \ref(tool_polygon,Polygon) || Draws polygons || image:supports_raster.png || image:supports_object.png ||
+|| graphic:toolicon-text.png || \ref(tool_text,Text) || Writes text || image:supports_raster.png || image:supports_object.png ||
+|| graphic:toolicon-floodfill.png || \ref(tool_fill,Fill) || Fills contiguous areas with color<br>replaces colors in objects || image:supports_raster.png || image:supports_object.png ||
+
+---
+label:tool_raster_selection
+== graphic:toolicon-rectsel.png Raster Selection ==
+The Selection tool selects and moves/manipulates areas in the
+image. Many commands behave differently when a selection is
+active. For example, the "Crop" command will crop the image to the
+selection if there is one, otherwise the command will perform
+an \ref(auto_crop,auto crop).
+
+*Settings*
+|| graphic:choice-transparent.png || Transparent background: The selected background color will not be transferred when the selection is moved. ||
+|| graphic:choice-opaque.png || Opaque background: The selected area will be transferred with all colors. The "hole" left behind a moved selection will receive the current background color.||
+|| graphic:alpha-blending.png || Alpha blending: When enabled, colors in the selection will blend with the background. When disabled, the colors from the selection will be copied as is to the background, including the alpha value. ||
+
+*Keyboard modifiers*
+|| image:key_ctrl.png || If Ctrl is held when a selection is dragged, the selection will be copied. ||
+|| image:key_shift.png || If shift is held when a selection is dragged, the drag will be constrained to horizontal or vertical lines. ||
+
+|| image:icon_info.png || Use Ctrl+Right-Click inside the selection to quickly pick a color to treat as transparent. Ctrl+Right-Click outside to select Opaque background. ||
+|| || See \ref(feat_dwim_delete.txt) for a quick way to clear an area with the surrounding color ||
+
+---
+label:tool_object_selection
+== graphic:toolicon-selobject.png Object Selection ==
+The Object Selection tool is used to select, move, resize, rotate and
+otherwise adjust objects.
+
+To select an object, click inside it. To deselect all objects, click
+outside. Hold Ctrl to select multiple objects, or click
+outside objects, hold the mouse and drag to select all objects within
+a rectangle.
+
+*Settings*\br
+|| image:objselectsettings.png || The Object Selection tool makes the settings of all selected objects editable.\brWhen a setting is changed, the selected objects will be adjusted. Note that the current drawing settings will remain unchanged.||
+|| graphic:edit-points.png || When an object with editable points is selected, this setting toggles between point editing and resizing. ||
+
+*Keyboard modifiers*
+||image:key_ctrl.png || If Ctrl is held when the selected objects are dragged, the objects will be copied instead of moved.\brIf Ctrl is held when starting a resize, the object will be rotated instead.||
+||image:key_shift.png ||When dragging, Shift constrains the drag to horizontal and vertical lines.\brWhen resizing, Shift keeps the object proportions.\brWhen rotating, Shift constrains to certain angles.||
+
+---
+label:tool_pen
+== graphic:toolicon-pen.png Pen ==
+The pen tool is used for single pixel thick free hand drawing. The pen
+is active while a mouse button is held. The left mouse button draws
+using the foreground color, the right mouse button draws using the
+background color.
+
+*Settings*\br
+The pen has no settings. For variable shape and thickness, use the \ref(tool_brush,brush) instead.
+
+*Keyboard modifiers*\br
+||image:key_shift.png || If shift is held while drawing, the pen will draw horizontal or vertical lines.||
+
+image:tool_pen_example.png \br'Example pen-output'
+
+---
+label:tool_brush
+== graphic:toolicon-brush.png Brush ==
+
+The brush tool is used for free hand drawing with a variably shaped and sized "brush".
+
+*Settings*\br
+
+|| graphic:brush-circle.png graphic:brush-rect.png ||Circular or rectangular brush||
+|| image:brush_size.png || The size of the brush in pixels ||
+
+*Keyboard modifiers*
+||image:key_shift.png || If shift is held while drawing, the brush will draw horizontal or vertical lines.||
+
+image:tool_brush_example.png \br'Example brush-output'
+
+---
+== graphic:toolicon-picker.png Color Picker ==
+label:tool_picker
+The color picker is used to select colors from the image. Use the left
+mouse button to use the targeted color as foreground color, and the
+right mouse button to use it as the background color. The color picker
+can also pick the entire image as a pattern.
+
+image:picker_example.png
+
+*Keyboard modifiers*
+|| image:key_ctrl.png image:mouse_left.png || Ctrl+Click picks the entire image as a pattern anchored at the click position ||
+|| image:key_ctrl.png image:key_shift.png image:mouse_left.png || Ctrl+Shift+Click picks the entire image as a pattern anchored at the top left corner. ||
+
+---
+label:tool_line
+== graphic:toolicon-line.png Line ==
+The line tool is used to draw lines.
+
+*Settings*
+|| image:linewidth.png || Line Width ||
+|| graphic:linestyle-solid.png graphic:linestyle-long-dash.png || Line Style ||
+|| graphic:line-arrow-front.png graphic:line-no-arrow.png || Arrow head ||
+
+*Keyboard modifiers*
+||image:key_shift.png ||If shift is held while drawing, the lines will be horizontal or vertical.||
+||image:key_ctrl.png ||In object mode, the adjusted line end will \ref(feat_snap_points.txt,snap) to other object points.||
+
+---
+label:tool_spline
+== graphic:toolicon-spline.png Spline (curved line) ==
+
+*Settings*
+|| image:linewidth.png || Line Width ||
+|| graphic:linestyle-solid.png graphic:linestyle-long-dash.png || Line Style ||
+
+---
+label:tool_rectangle
+== graphic:toolicon-rectangle.png Rectangle ==
+*Settings*
+|| image:linewidth.png || Line Width ||
+|| graphic:linestyle-solid.png graphic:linestyle-long-dash.png || Line Style ||
+|| graphic:fillstyle-border.png graphic:fillstyle-fill.png graphic:fillstyle-border-and-fill.png || Fill Style || Outline only, Fill only or Fill and Outline ||
+
+*Keyboard modifiers*
+||image:key_shift.png ||If shift is held while drawing, the rectangle will be constrained to a square.||
+||image:key_ctrl.png ||In object mode, the adjusted rectangle end-point will \ref(feat_snap_points.txt,snap) to other object points.||
+
+---
+label:tool_ellipse
+== graphic:toolicon-ellipse.png Ellipse (or circle) ==
+The Ellipse tool Draws ellipses or adds ellipse objects.
+
+*Settings*
+|| image:linewidth.png || Line Width || The width of the ellipse edge ||
+|| graphic:linestyle-solid.png graphic:linestyle-long-dash.png || Line Style ||
+|| graphic:fillstyle-border.png graphic:fillstyle-fill.png graphic:fillstyle-border-and-fill.png || Fill Style || Outline only, Fill only or Fill and Outline ||
+
+*Keyboard modifiers*
+||image:key_shift.png ||If shift is held while drawing, the ellipse will be constrained to a circle.||
+||image:key_ctrl.png ||If Ctrl is held, the ellipse will be centered at the start point.||
+---
+
+label:tool_polygon
+== graphic:toolicon-polygon.png Polygon ==
+The Polygon tool draws polygon shapes.
+
+*Settings*
+|| image:linewidth.png || Line Width || The width of the polygon edge ||
+|| graphic:linestyle-solid.png graphic:linestyle-long-dash.png || Line Style ||
+|| graphic:fillstyle-border.png graphic:fillstyle-fill.png graphic:fillstyle-border-and-fill.png || Fill Style || Outline only, Fill only or Fill and Outline ||
+
+*Keyboard modifiers*
+||image:key_shift.png ||If shift is held while drawing, the next polygon segment will be constrained to 45 degree angles.||
+||image:key_ctrl.png ||The next point will \ref(feat_snap_points.txt,snap) to other objects or grid.||
+---
+label:tool_text
+== graphic:toolicon-text.png Text ==
+The text tool adds a text box for either static text or editable text
+objects. To create a text box, click in the image and drag to create a box, then enter
+text with the keyboard. To stop entering text, use the right mouse button or Ctrl+Enter.
+
+When complete, the text will either be drawn to the image in raster mode, or added as a text object
+in object mode.
+
+To edit text objects, use the selection tool and double click the text object, or use
+the text tool and click a selected text object once.
+
+*Settings*
+|| image:fontface.png ||Font settings||Various font settings||
+|| image:fontsize.png ||Font size||Font size in points||
+---
+label:tool_fill
+== graphic:toolicon-floodfill.png Fill ==
+The fill tool replaces the color in a contiguous area with the current
+primary or secondary color. It can also be used to replace a colors in
+the entire image.
+
+*Keyboard modifiers*
+|| image:key_ctrl.png || If Ctrl is held when clicking, the clicked color will be replaced in the entire image (\ref(feat_replace_color.txt)). ||
+|| image:key_shift.png image:key_ctrl.png || If Shift+Ctrl is held when clicking, all colors other than the clicked will be replaced \ref(feat_erase_but_color.txt). ||

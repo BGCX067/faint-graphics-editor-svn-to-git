@@ -1,0 +1,13 @@
+#summary Instructions for building Faint
+
+= MOVING =
+Faint is moving to github.
+
+https://github.com/lukas-ke/faint-graphics-editor
+
+= Building Faint =
+*Note* These are build instructions for developers, and require quite a lot of work. 
+
+== Step by step instructions ==
+ * *[BuildMSW Windows + Visual Studio]*
+ * *[BuildLinux Linux (Ubuntu used as example)]*

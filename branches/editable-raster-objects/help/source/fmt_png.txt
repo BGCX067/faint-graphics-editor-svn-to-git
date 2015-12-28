@@ -1,0 +1,7 @@
+page:"PNG"
+summary:"A lossless raster format with alpha transparency."
+
+image:fmt_flatten.png image:fmt_lossless.png
+
+= Portable Network Graphics (.png) =
+Portable Network Graphics is a lossless raster format with alpha transparency.

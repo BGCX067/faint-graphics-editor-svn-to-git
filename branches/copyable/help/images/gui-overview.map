@@ -1,0 +1,10 @@
+185,90,266,136 raster-vs-object.txt
+185,137,266,294 gui-tool-panel.txt
+185,306,266,520 settings.txt
+185,541,234,588 gui-selected-color-control.txt
+236,543,634,602 gui-color-panel.txt
+637,544,789,604 gui-zoom-control.txt
+791,544,863,604 gui-grid-control.txt
+182,607,864,634 gui-status-bar.txt
+270,81,513,111 gui-tabs.txt
+599,111,618,127 gui-image-resize-handles.txt

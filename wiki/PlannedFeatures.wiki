@@ -1,0 +1,25 @@
+#summary Planned features
+=Planned features=
+This page lists features that are planned and their status. Through huge effort and discipline some features have been put on hold so that a point for a reasonably stable first release can be reached.
+
+== Custom objects ==
+Support for adding objects, such as diagram elements, furniture or electronics could be nice, if I find a way to add it that doesn't feel like bloat. 
+
+== Printing ==
+Obviously required feature that I haven't gotten around to yet.
+
+== Multiple-style text objects ==
+I really want the text tool to support different fonts at different locations in the same block of text.
+
+== Tablet feature support ==
+Support for pressure and angle sensitive pen tablets would be nice. *Started!*
+
+== File handling ==
+ * Renaming and moving opened images
+ * Set-able and Freezable start paths for load and save dialogs
+
+= Vague fantastic ideas that might never happen =
+ * Graph-like node linking/arranging
+ * Flexible image-like palette option
+ * Automatic "used colors" palette option
+ * Mathematically described curves

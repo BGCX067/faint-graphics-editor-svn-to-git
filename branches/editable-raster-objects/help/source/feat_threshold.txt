@@ -1,0 +1,13 @@
+page:"Threshold"
+summary:"Thresholding an image so that some intensities are replaced with white, others black"
+
+= Threshold =
+Images can be thresholded so that an intensity range becomes white,
+while all other intensities become black.
+
+|| image:feat_desaturate_color.jpg || image:feat_threshold1.png || image:feat_threshold2.png ||
+|| /Original image/ || /Thresholded/ || /Thresholded differently/ ||
+
+== Method ==
+This is done using either the \ref(gui_threshold_dialog.txt) or the
+Python function threshold(lower,upper).

@@ -1,0 +1,12 @@
+page:"LinearGradient"
+summary:"Class representing linear gradients"
+
+= LinearGradient =
+image:py_detached_copy.png
+
+The LinearGradient class represents linear color \ref(color_gradient,gradients).
+
+== LinearGradient methods ==
+!methoddef(py-linear-gradient.cpp,LinearGradient_methods)
+---
+See also \ref(py_radialgradient.txt), \ref(py_set_fg).

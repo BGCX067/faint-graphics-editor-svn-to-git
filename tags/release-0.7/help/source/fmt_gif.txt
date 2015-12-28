@@ -1,0 +1,9 @@
+page:fmt_gif.html "GIF"
+summary:"A lossless raster format with animation support."
+
+== Graphics Interchange Format (.gif) ==
+A lossless raster format with animation support.
+
+The number of colors per frame is limited to 256, so gif is suitable
+for simple sprites, or clipart - not photographs. When animation is
+not required, png is generally a better alternative.

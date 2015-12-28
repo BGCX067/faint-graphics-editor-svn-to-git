@@ -1,0 +1,4 @@
+page:ref_shortcuts.html "Keyboard Shortcuts"
+summary:"A list of keyboard shortcuts"
+
+= Keyboard shortcuts =

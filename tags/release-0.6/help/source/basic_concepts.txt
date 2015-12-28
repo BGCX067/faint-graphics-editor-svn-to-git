@@ -1,0 +1,64 @@
+page:basic_concepts.html "Basic Concepts"
+
+= Basic Concepts =
+This help topic will familiarize you with the basics of Faint, and
+especially things that may be different from other graphics
+editors. You are recommended to at least read -rasterandobject- to
+enable you to use Faint effectively.
+
+== Raster and object graphics ==
+label:rasterandobject
+Faint has two modes: the 'Raster mode' and the 'Object mode' (or
+'Vector mode'). The mode controls the output and behavior of drawing operations.
+A Faint image can mix elements from both modes. By default, raster
+graphics are at the bottom and object graphics are placed on top.
+
+The current mode determines the output created by -tools.txt- as their
+output type (adjustable objects or static drawn pixels). The mode is
+selected with the 'Layer selection control' at the top of the tool
+panel\
+image:img_layer_selection.png \The 'Layer Selection Control'.
+
+image:layer_raster.png *Selects the raster mode.*\
+Working in the 'Raster mode' is a bit like regular drawing - that which has been
+drawn can be erased or drawn over but not easily adjusted. The Raster mode is suitable for sketching, pixel\-art and photo\-editing.\
+image:raster_graphics_example.png \Static (drawn) 'Raster Graphics'.
+
+image:layer_vector.png *Selects the object mode.*\
+To continue with silly analogies, working in the object mode is like extreme
+scrap-booking. Anything drawn in object mode mode becomes a vector
+object that can be selected, moved and scaled. These objects can,
+however, not be manipulated on the pixel-level, therefore vector
+graphics are practical for diagrams (floor plans, flow-charts), and
+some types of drawings - but not for e.g. photographs or pixel art.\
+image:vector_graphics_example.png \Adjustable (vector) 'Objects'.
+
+When saving an image with object graphics, a vector file format, such
+as SVG, should be used so the objects are preserved. Raster
+file formats flatten the image. (See -formats.txt-).
+
+The combination of object and raster graphics makes it possible to add
+adjustable annotations such as text and arrows to raster images.\
+image:img_annotations.png \
+Photo with annotations using the 'Raster layer' for the photograph,
+and the 'Object layer' for the text and arrows.
+
+== Selection ==
+Faint features two types of selection: raster and object
+selection. The raster selection selects a region in the raster
+graphics, while object selection deals with complete objects. Some
+operations are only available when a selection is active. For example,
+'Delete' will replace the selected raster area in the image with the
+background color or, for object selection, remove all selected
+objects.
+
+The raster selection is used to move, delete and copy parts of the
+raster image.  The object selection is likewise used to move, delete
+and copy objects. The object selection also allows changing properties
+of the selected objects, such as line width or color.
+
+|| image:raster_selection_example.png \'/Raster selection/' || image:vector_selection_example.png \ '/Object selection/' ||
+
+label:color
+== Color ==
+image:color_options.png

@@ -1,0 +1,4 @@
+page:"Snap to Object points"
+summary:"Snapping to object points while adjusting points or drawing"
+
+= Snap to object points =

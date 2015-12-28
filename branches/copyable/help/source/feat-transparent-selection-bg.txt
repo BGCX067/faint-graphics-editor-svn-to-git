@@ -1,0 +1,36 @@
+page:"Transparent Selection Background"
+summary:"Setting the transparent color for the raster selection"
+
+= Transparent selection background =
+A single color in a dragged raster-selection can be made transparent.
+This is especially useful for excluding a background color when
+dragging graphics.
+
+\image(feat_transparent_selection_bg_overview.png)
+
+== Method ==
+*Normal (boring) method:* Use the raster selection tool. Enable
+Transparent Background. Select the color to make transparent as the
+secondary color by right clicking in the palette.
+
+*Quick method:* Use Ctrl+Right-Click inside the raster selection to
+quickly pick a color to treat as transparent. Ctrl+Right-Click
+outside to select Opaque background.
+
+== Example ==
+
+|| *1* A fancy car is selected. ||
+||\image(feat_transparent_selection_bg_1.png)||
+
+|| *2* The car is dragged onto the road, but part of the road and the tree are erased. A white hole is left where the car was. ||
+||\image(feat_transparent_selection_bg_2.png)||
+
+|| *3* Transparent Background enabled. Dark blue selected as secondary color ||
+||\image(feat_transparent_selection_bg_3.png)||
+
+|| *4* For illustration, this is the appearance if red is used as the secondary color. ||
+||\image(feat_transparent_selection_bg_4.png)||
+
+---
+See also \ref(feat-transparent-raster-object-bg.txt) for a similar
+method for raster 'objects'.

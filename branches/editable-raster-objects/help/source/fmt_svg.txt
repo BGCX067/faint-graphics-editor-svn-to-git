@@ -1,0 +1,9 @@
+page:"SVG"
+summary:"A vector format"
+
+image:fmt_vector.png
+
+= Scalable Vector Graphics (.svg) =
+A format for Vector images. Faint also saves the background (if not single color) as an embedded PNG, so
+SVG is a suitable for storing images with both vector and raster elements. Note that images saved from
+Faint with embedded raster graphics can cause rather large SVG files.

@@ -1,0 +1,10 @@
+page:"Frame"
+summary:"Interface to an image frame"
+
+= Frame =
+image:py_modifies_state.png
+
+A frame object references one frame in an image.
+
+== Frame methods ==
+!methoddef(py-frame.cpp,frame_methods)

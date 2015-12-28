@@ -1,0 +1,53 @@
+#summary General overview
+#sidebar Navigation
+
+= MOVING =
+Faint is moving to github.
+
+https://github.com/lukas-ke/faint-graphics-editor
+
+= Releases =
+Rather-beta installers for windows are made available quite randomly:
+http://code.google.com/p/faint-graphics-editor/downloads/list
+
+For the latest revision, or other platforms, see the BuildInstructions.
+
+= So what does it do? =
+I currently use it for simple raster editing. It works reasonably well for stuff like icons, sprites, pikachus etc. I use the raster+object combo to annotate stuff, and vector graphics for the various diagrams I need in my daily routine. When not torpedoed by some gigantic bug or lacking feature, I find this very efficient.
+
+On the photo-side Faint is somewhat limited. It works acceptably well for compositing stuff for silly uses. I use it a lot for cropping screen shots.
+
+The current strengths are the non-obtrusive interface, the multi image support with tabs and splitting, the nice mix of raster and vector editing, the babble-free saving, the reasonably nice file handling and the scripting support.
+
+Support for animated gifs and Windows-icons was added recently (2012-08). It's still not stable, but looks promising.
+
+Here's a [Features list of features] and here are some [PlannedFeatures vague promises]. There are some screenshots on the [http://sites.google.com/site/faintgraphics/ webpage].
+
+= Tools =
+See ToolStatus for a tabular overview of tool support in the raster and vector layers.
+
+The worst problems with the current set of tools is probably the lack of marquee (and wand?) selection, limited text features, no path editing and the naive and slow brush implementation.
+
+= UI/General =
+There is no printing support. This is low priority since other commonly available applications probably do printing better than a quick fix print dialog would.
+
+= Python scripting =
+There's a basic architecture in place which can access most Faint features.
+It is possible to add custom file formats via the Python interface/user ini.
+
+= File formats =
+Faint supports the vector formats SVG and PDF, and a bunch of raster formats. Per-format info: VectorFormats RasterFormats
+
+PNG works fine, including alpha channel.
+
+Loading and saving SVG works acceptably well for the subset required/supported by Faint.
+
+PDF writing is currently a custom hack and the created files are most likely corrupt. It might be wiser to implement this with the cairo PDF output, but the custom implementation allows Faint to open PDF:s it has saved, with little information loss.
+
+The main reason for supporting pdf is easy image inclusion in documents prepared with LaTeX. This suggests that postscript output is required as well.
+ 
+= Palette/Color =
+The palette (i.e. set of colors) can be edited. Palette colors can have alpha values, and the custom color dialog supports this. There's also support for using patterns and gradients as colors.
+
+= Deployment =
+NSIS is used for the installer on Windows.

@@ -1,0 +1,25 @@
+int settings_set_$name( settingsObject* self, PyObject* args, void* ){
+  if ( !PyBool_Check( args ) ){
+    PyErr_SetString( PyExc_ValueError, "Argument is not boolean" );
+    return -1;
+  }
+
+  bool value = (args == Py_True);
+  self->settings->Set( $setting, value );
+  return 0;
+}
+
+static PyObject* settings_get_$name( settingsObject* self, PyObject*, void* ){
+  if ( self->settings->Has( $setting ) ){
+    bool value = self->settings->Get( $setting );
+    if ( value ){
+      Py_RETURN_TRUE;
+    }
+    Py_RETURN_FALSE;
+  }
+  else {
+    PyErr_SetString( PyExc_ValueError, "$prettyname not set" ); // Fixme
+    return 0;
+  }
+}
+

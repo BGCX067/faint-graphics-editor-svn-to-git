@@ -1,0 +1,29 @@
+int settings_set_$name( settingsObject* self, PyObject* args, void* ){
+  // from settings_string_template.txt
+
+  if ( !PyUnicode_Check( args ) ){
+    PyErr_SetString( PyExc_ValueError, "Argument must be a string" );
+    return faint::setter_fail;
+  }
+  faint::ScopedRef utf8(PyUnicode_AsUTF8String(args));
+  if ( *utf8 == nullptr ){
+    return faint::setter_fail;
+  }
+
+  char* str = PyBytes_AsString(*utf8);
+  if ( str == 0 ){
+    return faint::setter_fail;
+  }
+  self->settings->Set( $setting, str );
+  return faint::setter_ok;
+}
+
+static PyObject* settings_get_$name( settingsObject* self, PyObject*, void* ){
+  // from settings_string_template.txt
+
+  if ( !self->settings->Has( $setting ) ){
+    PyErr_SetString( PyExc_ValueError, "$prettyname not set" );
+    return nullptr;
+  }
+  return Py_BuildValue("s", self->settings->Get( $setting ).c_str() );
+}

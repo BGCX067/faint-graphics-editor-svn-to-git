@@ -1,0 +1,22 @@
+page:main.html "Faint Help"
+= image:faint_icon.png  Welcome to Faint... =
+
+...the free, easy to use, scriptable, fun and surprisingly powerful
+combined vector and raster graphics editor which does all you need and
+nothing else.
+
+== Help topics ==
+If you are new to Faint, you should read the chapters -introduction.txt-
+and -basic_concepts.txt-. You can also try a -tutorials.txt,tutorial-.
+
+|| image:icon_info.png ||*Navigating the help*: \ Space\-bar scrolls the help text one page. \ Arrow-keys target the focused window (either the help index or the help text). Use Ctrl+'Arrow' to target the other window. \ Page Up and Page Down always target the help text window. ||
+
+== Help chapters ==
+* -tools.txt-
+* -objects.txt-
+* -formats.txt-
+
+== Reference topics ==
+* -ref_shortcuts.txt-
+* -ref_menu.txt-
+* -ref_python.txt-

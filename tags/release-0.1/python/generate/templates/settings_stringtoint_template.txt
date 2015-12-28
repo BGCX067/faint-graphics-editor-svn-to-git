@@ -1,0 +1,25 @@
+int settings_set_$name( settingsObject* self, PyObject* args, void* ){
+  if ( !PyString_Check( args ) ){
+    PyErr_SetString( PyExc_ValueError, "Argument must be a string" );
+    return -1;
+  }
+  char* s_value = PyString_AsString( args );
+
+  int i_value = -1;
+  $string_to_int
+
+  self->settings->Set( $setting, i_value );
+  return 0;
+}
+
+static PyObject* settings_get_$name( settingsObject* self, PyObject*, void* ){
+  if ( !self->settings->Has( $setting ) ){
+    PyErr_SetString( PyExc_ValueError, "$prettyname not set" );
+    return 0;
+  }
+  int i_value = self->settings->Get( $setting );
+  const char* s_value = 0;
+  $int_to_string
+  return Py_BuildValue("s", s_value );
+}
+

@@ -1,0 +1,4 @@
+page:gui_status_bar.html "Status bar"
+summary:"The status bar for tool feedback"
+
+= Status Bar =

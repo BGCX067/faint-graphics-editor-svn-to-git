@@ -1,0 +1,35 @@
+#summary Overview of the support for raster formats in Faint
+
+= GIF =
+For gif saving, the wxAnimation class is used http://docs.wxwidgets.org/2.9.4/classwx_animation.html
+
+|| *Feature* || *Have it?* || *Notes* ||
+||Animation||Yes|| ||
+||Load||Yes|| ||
+||Save||Yes||Poor quantization. Only first frame delay used.||
+||Configurable delay||Yes||Python only||
+||Per-frame delay||No|| ||
+||Transparent frame compositing||No|| Clever gifs are displayed incorrectly and are broken when saved ||
+
+= Icon =
+The icon loading is custom-implemented for Faint. More work is required for this to be considered stable.
+
+|| *Feature* || *Have it?* || *Notes* ||
+||Multi-image support||Yes|| ||
+||Load embedded PNG||Yes|| Necessary for most 256x256 icons. ||
+||Save embedded PNG||No|| Microsoft recommends PNG for 256x256 icons ||
+||32bpp BI_RGB||Yes|| The icon-bitmap format that was added first to Faint ||
+||Other bpp/compression||No|| Important for successful loading of icons from other applications. ||
+
+= JPG =
+|| *Feature* || *Have it?* || *Notes* ||
+|| High quality || No || Not that investigated, but most likely saved jpg:s are of low quality compared to those from professional photo editors ||
+|| Customizable compression || No || ||
+|| EXIF || No ||
+
+= PNG =
+|| *Feature* || *Have it?* || *Notes* ||
+||Alpha||Yes|| ||
+||Bit depth options||No||
+||Palette options||No||
+||Meta data support||No||

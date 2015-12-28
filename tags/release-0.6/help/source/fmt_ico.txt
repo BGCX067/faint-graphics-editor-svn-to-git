@@ -1,0 +1,8 @@
+page:fmt_ico.html "ICO"
+summary:"A format for application icons on Microsoft Windows"
+
+= Windows Icon (.ico) =
+A format for application icons on Microsoft Windows.  An icon consists
+of one or more images of different size and color depth to provide
+variants for different situations. The width and height of icons is
+limited to 256 pixels.

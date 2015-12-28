@@ -1,0 +1,23 @@
+page:"Rotate Dialog"
+summary:"A dialog with options for rotating or flipping the image or selection"
+
+= The rotate dialog =
+The rotate dialog is used for rotating or flipping. If no selection is
+active when the dialog is opened, the action will affect the entire
+image. If a raster area or objects are selected, only that selection
+will be affected.
+
+To open the rotate dialog use Image->Rotate (Ctrl+R).
+
+|| image:gui_rotate_dialog_image.png ||
+|| / The rotate dialog / ||
+
+== Dialog options ==
+|| *Icon* || *Quick key* || *Description* ||
+|| graphic:rotate-dialog-flip-horizontal.png || /Q/ || Flip (mirror) horizontally ||
+|| graphic:rotate-dialog-flip-vertical.png || /W/ || Flip (mirror) vertically ||
+|| graphic:rotate-dialog-rotate90-cw.png || /E/ || Rotate 90 degrees clock-wise ||
+
+---
+See also:
+* The \ref(gui_resize_dialog.txt).

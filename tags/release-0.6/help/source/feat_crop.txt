@@ -1,0 +1,34 @@
+page:feat_crop.html "Crop"
+summary:"Image cropping"
+
+= Crop =
+Cropping shrinks the image or certain selected objects.
+
+== Method ==
+* Menu: Edit->Crop (Ctrl+Alt+C)
+* Python: context_crop()
+
+== Details ==
+There are three cropping methods: auto crop, crop to raster selection and crop objects.
+
+label:auto_crop
+*Auto crop:* If no selection is active, the image is cropped automatically by
+removing contiguous colors from the edges.
+
+|| image:feat_autocrop_pre.png || image:feat_autocrop_post.png ||
+|| No selection, raster mode || Ctrl+Alt+C auto-crops ||
+
+*Crop to raster selection:* Crop will remove everything outside the selection.
+
+|| image:feat_crop_raster_pre.png || image:feat_crop_raster_post.png ||
+|| A raster selection is active || Ctrl+Alt+C crops away everything outside the selection ||
+
+*Crop objects:* Crop will be performed on each object if used with an
+object selection. Object crop is supported by Text Regions and Raster
+Objects.
+
+|| image:feat_crop_objects_pre.png || image:feat_crop_objects_post.png ||
+|| A raster object, an ellipse and two text objects are selected. || Ctrl+Alt+C crops the raster object and resizes the text objects. ||
+
+---
+See also -feat_raster_selection.txt- and -feat_object_selection.txt-.

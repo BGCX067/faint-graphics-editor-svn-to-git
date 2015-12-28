@@ -1,0 +1,12 @@
+#summary Wiki sidebar
+ * [Overview]
+ * [BuildInstructions Build instructions]
+  * [BuildMSW Step by step Windows+Visual Studio]
+  * [BuildLinux Step by step Linux]
+ * [Features]
+ * [PlannedFeatures Planned features]
+ * [VectorFormats Vector file formats]
+ * [RasterFormats Raster file formats]
+ * [Notes]
+
+ * [http://code.google.com/p/faint-graphics-editor/w/list Page-list]

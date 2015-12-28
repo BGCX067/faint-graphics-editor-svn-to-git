@@ -1,0 +1,8 @@
+page:"Selected color control"
+summary:"The selected color control"
+
+= Selected color control =
+image:color_options.png
+
+Opens the \ref(gui_color_selection_dialog.txt) for adjusting the
+foreground or background when either is clicked.

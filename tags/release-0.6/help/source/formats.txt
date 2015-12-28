@@ -1,0 +1,52 @@
+page:formats.html "File Formats"
+
+= File formats =
+Faint can save images in a number of formats. Which format should be
+used depends on the type of image and intended use.
+
+== Format recommendations ==
+This table lists which file format should be used for different types
+of images.
+
+tablestyle:3
+|| *Image type* || *Recommended format* ||
+|| Photo || jpg ||
+|| Pixel art, drawing || png, gif ||
+|| Animation || gif ||
+|| Diagram (vector graphics) || svg ||
+|| Mix of raster and vector || svg ||
+
+== File format list ==
+tablestyle:3
+|| *Format* || *Compression* || *Flattens* || *Note* ||
+|| gif || Lossless (limited palette) || Yes || Animations, pixel art ||
+|| jpg || Lossy || Yes || Photographs ||
+|| png || Lossless || Yes || Screenshots, pixel-art, clip-art ||
+|| svg || Vector || No || Vector images for Web ||
+|| pdf || Vector || No || Vector images for documents ||
+|| ico || Lossless || Yes || Icons ||
+
+== Adobe Portable Document Format (.pdf) ==
+A vector format for documents. This format should be used for output
+when vector images are to be used in a PDF (created with for example
+pdflatex).
+
+== Graphics Interchange Format (.gif) ==
+A lossless raster format with animation support. Suitable for images
+with few colors and for animations. When animation is not required, png is
+generally a better alternative.\
+-fmt_gif.txt,Read more-
+
+== JPEG (.jpg) ==
+A lossy raster format for photographs.
+
+== Portable Network Graphics (.png) ==
+A lossless raster format with support for alpha-transparency.
+
+== Scalable Vector Graphics (.svg) ==
+A vector graphics file format with wide application support, however
+the Faint support for SVG is currently very limited.
+
+== Windows Icon (.ico) ==
+A format for application icons on Microsoft Windows.\
+-fmt_ico.txt,Read more-

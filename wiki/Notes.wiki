@@ -1,0 +1,52 @@
+#summary Thoughts or bugs that I've been too lazy to report as issues.
+
+= Stuff I want soon =
+ * Better boundingbox for rotated Polygons (et al)
+ * Skewing for all objects
+ * Better brush speed
+
+= Text =
+ * Text box needs padding options
+ * Need centering
+ * Home/End/Move up/Move down only works for hard linebreaks
+----
+Move up should remember preferred x-pos, like wordpad - not like notepad.
+e.g. <BR>
+"asdfsdad<BR>
+ghia<BR>
+jdsf<BR>
+< blank line ><BR>
+kla|sdfsdfs"<BR>
+
+Caret start is at line y=5, x=3<BR>
+When moved up to the blank line, x will be 0<BR>
+when up again, caret should again be at x=3<BR>
+----
+This could be useful (wxFileDialog):
+{{{
+bool SetExtraControlCreator (ExtraControlCreatorFunction creator)
+}}}
+Customize file dialog by adding extra window, which is typically placed below the list of files and above the buttons.
+----
+= Misc =
+ * Ctrl+Arrows to navigate the tree in the help window when help area has focus can not move up/down or open/close.
+ * Edited photos lose all image information when saved (e.g. date taken)
+ * Object paste-to-new not large enough, compare object autocrop
+ * The line width control sometimes stops working! I went back to using an integer control to resolve this for now (r1127)
+ * Tiny (1 pixel or less) raster objects cause crashes
+ * Scaled raster object with masked background should blend towards image below, not object background color 
+ * SVG: I need to declare the faint custom attributes for conformity
+ * SVG: Need to apply settings in groups and subgroups recursively.
+ * For image list setting control, the control should indicate if only a subset of the selected objects have the values, e.g. using a shade
+ * Crash if pasting objects between Faint instances
+ * Hold some key when resizing canvas to resize in all directions?
+ * Consider: Pasted object appears at same location as original if visible, only otherwise top left.
+ * Object selection lost on redo after scale
+ * Add support for svg:s produced with Graphviz dot ~~(breaks due to multiple transformations)~~ <- Transformations fixed in r1220, but text alignment etc. needs work
+ * Links in SVG
+ * Consider uniform tab-size up to a certain length - makes closing with mouse nicer
+ * Remove file from recent when missing on open-attempt. Missing files seem to be removed on Faint-start, but not when already started, so if one file remains, the error will appear on all "open all", etc. Especially annoying when moving a file, as there may be two entries in the menu.
+ * Per-item tooltip in imagelist
+ * Mad idea: look in command history for raster-snap points?
+----
+ 

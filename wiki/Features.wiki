@@ -1,0 +1,91 @@
+#summary Feature overview
+=Features=
+These are the features that are currently implemented.
+
+*Note:* This means they're implemented in trunk. The installers may be older.
+
+See also [PlannedFeatures]
+
+==Main features==
+ * Supports both raster and vector graphics by a quick mode-switch - anything drawn in  raster mode becomes raster graphics, anything drawn in object mode becomes adjustable (vector-) objects
+ * Raster graphics can be pasted in object mode and then become a scalable raster object
+ * Patterns and gradients behave just like colors and can be used by all tools, added to the palette etc.
+ * The image can be "picked" as a pattern which allows selective reverting, merging images, cloning and such.
+ * Python scripting
+
+==Tools==
+ * Brush
+ * Ellipse
+ * Color picker
+ * Flood-fill
+ * Leveling (rotate to align points)
+ * Line (and poly line)
+ * Pen
+ * Path (Work in progress)
+ * Polygon
+ * Rectangle
+ * Selection
+ * Spline
+ * Text
+ * Hot-spot (for cursors)
+ * Coordinate system calibration
+ * Tape measure (for image measurements)
+
+==Object features==
+ * Recursive grouping and ungrouping
+ * Change Z-order
+ * Resize, rotate, flip
+ * Change settings (line width, text, font, colors)
+ * Convert to path
+ * Auto-measurements in text objects
+
+==Filters==
+ * Sharpen (Unsharp mask)
+ * Gaussian blur
+ * Brightness/Contrast
+ * Threshold
+ * Pixelize
+ * Stroke (extra border)
+ * Shadow
+ * Pinch/Whirl
+ * Invert
+ * Quantize (color reduction)
+ * Desaturate (color to grayscale)
+
+==Other==
+ * Arrowheads
+ * Grid
+ * Snapping to object corners, center and center-points of edges or the grid (not annoying!)
+ * Splittable tabbed interface
+ * Adjustable palette
+ * Crop to selection
+ * Auto crop
+ * Endless undo
+ * Length and angle information
+ * Constrain-able drawing, e.g. ellipse to circle, line to 45 degree angle, to grid
+ * Multiple color choices:
+  * RGBA colors
+  * Patterns
+  * Gradients 
+ * Animated gif support
+ * Multi-image icon support
+
+==Scripting==
+ * Functions can be defined to automate common tasks or to select tools, styles and colors
+ * Allows scripted drawing, practical for drawing e.g. grids etc, batch editing or updating text (like a date) in an image automatically
+ * Functions can be bound to keys
+ * Custom file formats can be added
+
+==Expressions in text objects==
+Text objects support expressions that refer to objects, for example:
+"The rectangle area is \area(my_rectangle, mm2) mm\sq"
+
+==Formats==
+Loads many raster formats (as supported by wxWidgets). Also loads SVG with some success. Saves to:
+ * png
+ * jpg (No quality options yet)
+ * svg
+ * pdf (Limited support)
+ * ico (Windows icon)
+ * cur (Windows cursor)
+ * gif

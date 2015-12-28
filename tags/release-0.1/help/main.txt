@@ -1,0 +1,20 @@
+page:main.html "Faint"
+= image:faint_icon.png  Welcome to Faint... =
+
+...the free, easy to use, scriptable, fun and surprisingly powerful
+combined vector and raster graphics editor which does all you need and
+nothing else.
+
+== Help topics ==
+If you are new to Faint, you should read the chapters -introduction.txt-
+and -basic_concepts.txt-. You can also try a -tutorials.txt,tutorial-.
+
+== Help chapters ==
+* -tools.txt-
+* -objects.txt-
+* -formats.txt-
+
+== Reference topics ==
+* -ref_shortcuts.txt-
+* -ref_menu.txt-
+* -ref_python.txt-

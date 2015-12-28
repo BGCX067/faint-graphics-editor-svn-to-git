@@ -1,0 +1,17 @@
+int settings_set_$name( settingsObject* self, PyObject* sequence, void* ){
+  faint::DrawSource src;
+  if ( !parse_draw_source( sequence, src ) ){
+    return faint::setter_fail;
+  }
+  self->settings->Set( $setting, src );
+  return faint::setter_ok;
+}
+
+static PyObject* settings_get_$name( settingsObject* self, PyObject*, void* ){
+  if ( !self->settings->Has( $setting ) ){
+    PyErr_SetString( PyExc_ValueError, "$prettyname not set" );
+    return nullptr;
+  }
+  faint::DrawSource src( self->settings->Get($setting) );
+  return build_draw_source(src);
+}

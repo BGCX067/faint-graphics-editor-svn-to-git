@@ -1,0 +1,20 @@
+page:"Object selection"
+summary:"Tool for selecting objects"
+
+= \graphic(tool-selobject.png) Object selection =
+label:tool_object_selection
+The Object Selection tool is used to select, move, resize, rotate and
+otherwise adjust objects.
+
+To select an object, click inside it. To deselect all objects, click
+outside. Hold Ctrl to select multiple objects, or click
+outside objects, hold the mouse and drag to select all objects within
+a rectangle.
+
+*Settings*\br
+||\image(objselectsettings.png)|| The Object Selection tool makes the settings of all selected objects editable.\brWhen a setting is changed, the selected objects will be adjusted. Note that the current drawing settings will remain unchanged.||
+||\graphic(edit-points.png)|| When an object with editable points is selected, this setting toggles between point editing and resizing. ||
+
+*Keyboard modifiers*
+||\image(key_ctrl.png)|| If Ctrl is held when the selected objects are dragged, the objects will be copied instead of moved.\brIf Ctrl is held when starting a resize, the object will be rotated instead.||
+||\image(key_shift.png)||When dragging objects, Shift constrains the drag to horizontal and vertical lines.\brWhen resizing, Shift keeps the object proportions.\brWhen rotating, Shift constrains to certain angles.||
